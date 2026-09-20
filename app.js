@@ -18,14 +18,14 @@ const totalSets = 4;
 
 const programs = {
   power: [
-    { name: 'Силове витяжіння', desc: 'Максимальне напруження м\'язів каркасу' },
+    { name: 'Силове витягування', desc: 'Максимальне зміцнення глибоких м\'язів корсета' },
     { name: 'Скручування', desc: 'Робота з косими м\'язами живота' },
-    { name: 'Статика', desc: 'Утримання позиції під кутом' }
+    { name: 'Статика', desc: 'Утримання статичної позиції під кутом' }
   ],
   rehab: [
-    { name: 'Напіввисі', desc: 'Розслаблення м\'язів спини, витяжіння' },
-    { name: 'Плавні повороти', desc: 'Відновлення рухливості хребців' },
-    { name: 'Дихальна вправа', desc: 'Синхронізація дихання з розтяжкою' }
+    { name: 'Напіввиси', desc: 'Розслаблення м\'язів спини та м\'яке витягування хребта' },
+    { name: 'Плавні повороти', desc: 'Відновлення природної рухливості хребців' },
+    { name: 'Дихальна вправа', desc: 'Синхронізація дихання з розвантажувальною розтяжкою' }
   ]
 };
 
@@ -124,3 +124,50 @@ function selectProgram(type) {
 // Initialize
 updateDisplay();
 setAngle(30);
+
+// Video Gallery Logic and Data
+const videoData = {
+  'X-v5XyT1XwU': {
+    title: 'Репортаж телеканалу КИЇВ24',
+    desc: 'Ексклюзивний сюжет про РПС Євмінова за участі полковника Сил оборони Володимира Стецюка та головного інженера-розробника з позивним «Тул».'
+  },
+  '6aK2kpcq2Z0': {
+    title: 'Демонстрація мобільності (Shorts)',
+    desc: 'Реальне випробування рухливості на 360 градусів у повному екіпіруванні. Бій в обмеженому просторі, нахили, присідання та біг.'
+  },
+  'RqKDdvtqbk8': {
+    title: 'Технічний огляд та налаштування',
+    desc: 'Детальна інструкція зі збирання системи, індивідуального підгону висоти рельси та регулювання з\'єднання «Кукумбер» під антропометрію бійця.'
+  },
+  'NBxzUCDOxh4': {
+    title: 'Випробування у бойових умовах',
+    desc: 'Реальні відгуки військовослужбовців ЗСУ та польові тести системи на тактичному полігоні Сил оборони України.'
+  }
+};
+
+function selectVideo(videoId, element) {
+  const iframe = document.getElementById('main-video-player');
+  if (!iframe) return;
+  
+  // Set embed URL
+  iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+  
+  // Update description
+  const info = videoData[videoId];
+  if (info) {
+    document.getElementById('video-title').textContent = info.title;
+    document.getElementById('video-desc').textContent = info.desc;
+  }
+  
+  // Update active state class in playlist
+  document.querySelectorAll('.video-card').forEach(card => {
+    card.classList.remove('border-tactical-accent', 'bg-tactical-olive/20');
+    card.classList.add('border-white/5', 'bg-tactical-dark');
+  });
+  
+  if (element) {
+    element.classList.remove('border-white/5', 'bg-tactical-dark');
+    element.classList.add('border-tactical-accent', 'bg-tactical-olive/20');
+  }
+}
+

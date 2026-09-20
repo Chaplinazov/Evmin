@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>РПС ЄВМІНОВА — Тактичне спорядження майбутнього</title>
+    <title>РПС Євмінова — Анатомічна тактична система розвантаження хребта</title>
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#4b5320">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -17,7 +17,7 @@
                             olive: '#4b5320',
                             dark: '#0a0a0a',
                             gunmetal: '#2a2d34',
-                            accent: '#eab308', // Gold/Yellow
+                            accent: '#fbbf24', // Yellow/Gold
                             patriotic: '#2563eb' // Blue
                         }
                     },
@@ -30,15 +30,18 @@
         }
     </script>
     <style>
-        body { font-family: 'Roboto', sans-serif; background-color: #0a0a0a; color: #e5e7eb; }
-        h1, h2, h3 { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 0.05em; }
+        body { font-family: 'Roboto', sans-serif; background-color: #0a0a0a; color: #e5e7eb; scroll-behavior: smooth; }
+        h1, h2, h3, h4 { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 0.05em; }
         .bg-tactical-gradient {
-            background: linear-gradient(180deg, rgba(10,10,10,1) 0%, rgba(75,83,32,0.3) 100%);
+            background: linear-gradient(180deg, rgba(10,10,10,1) 0%, rgba(75,83,32,0.25) 100%);
         }
         .btn-tactical {
             background-color: #4b5320;
             border-bottom: 4px solid #323815;
             transition: all 0.2s;
+        }
+        .btn-tactical:hover {
+            background-color: #5b6427;
         }
         .btn-tactical:active {
             border-bottom-width: 0;
@@ -49,109 +52,435 @@
 <body class="overflow-x-hidden">
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 bg-tactical-dark/90 backdrop-blur-md border-b border-tactical-olive/30 py-4 px-6 flex justify-between items-center">
-        <div class="text-2xl font-bold text-tactical-olive flex items-center gap-2">
+    <nav class="fixed top-0 w-full z-50 bg-tactical-dark/95 backdrop-blur-md border-b border-tactical-olive/30 py-4 px-6 flex justify-between items-center">
+        <div class="text-xl md:text-2xl font-bold text-tactical-olive flex items-center gap-2">
             <span class="text-white">РПС</span> ЄВМІНОВА
         </div>
-        <div class="flex gap-4">
-            <a href="#training" class="text-xs uppercase tracking-widest font-bold text-tactical-accent border border-tactical-accent/50 px-3 py-1 rounded">Тренування</a>
+        <div class="hidden md:flex gap-6 items-center">
+            <a href="#about" class="text-xs uppercase tracking-wider font-bold text-gray-300 hover:text-tactical-accent transition-colors">Про систему</a>
+            <a href="#benefits" class="text-xs uppercase tracking-wider font-bold text-gray-300 hover:text-tactical-accent transition-colors">Характеристики</a>
+            <a href="#medical" class="text-xs uppercase tracking-wider font-bold text-gray-300 hover:text-tactical-accent transition-colors">Медицина</a>
+            <a href="#media" class="text-xs uppercase tracking-wider font-bold text-gray-300 hover:text-tactical-accent transition-colors">Відео</a>
+            <a href="#training" class="text-xs uppercase tracking-wider font-bold text-tactical-accent border border-tactical-accent/30 px-3 py-1 rounded hover:bg-tactical-accent/10 transition-colors">Тренування</a>
+        </div>
+        <div class="md:hidden">
+            <a href="#training" class="text-[10px] uppercase tracking-widest font-bold text-tactical-accent border border-tactical-accent/50 px-2 py-1 rounded">Тренування</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center justify-center pt-20 px-6 bg-tactical-gradient">
+    <section class="relative min-h-screen flex items-center justify-center pt-24 px-6 bg-tactical-gradient">
         <div class="max-w-4xl text-center">
-            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 animate-pulse">
-                Інженерна <span class="text-tactical-olive">ергономіка</span> для військових
+            <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                АНАТОМІЧНЕ <span class="text-tactical-olive">РОЗВАНТАЖЕННЯ</span> ДЛЯ ЗАХИСНИКІВ
             </h1>
-            <p class="text-xl md:text-2xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-                Повністю знімає <span class="text-white font-bold">100% ваги</span> бронезахисту та рюкзака з плечей, переносячи її на таз.
+            <p class="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Революційна запатентована тактична система, яка повністю переносить <span class="text-white font-bold">100% ваги бронезахисту</span> та рюкзака з плечового пояса на кістки таза, зберігаючи здоров'я хребта.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#about" class="btn-tactical text-white px-10 py-4 rounded-lg font-bold text-lg uppercase">Дізнатися більше</a>
-                <a href="#training" class="bg-tactical-gunmetal text-white px-10 py-4 rounded-lg font-bold text-lg uppercase border border-white/10">Програми тренувань</a>
+                <a href="#about" class="btn-tactical text-white px-8 py-4 rounded-lg font-bold text-sm md:text-base uppercase tracking-widest">Дізнатися більше</a>
+                <a href="#benefits" class="bg-tactical-gunmetal hover:bg-tactical-gunmetal/80 text-white px-8 py-4 rounded-lg font-bold text-sm md:text-base uppercase tracking-widest border border-white/10 transition-all">Характеристики</a>
             </div>
         </div>
     </section>
 
-    <!-- Problem Section -->
+    <!-- Problem & Anatomy Section -->
     <section id="about" class="py-24 px-6 bg-tactical-dark border-t border-white/5">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-5xl font-bold mb-4">Проблема</h2>
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Критична проблема екіпірування</h2>
                 <div class="h-1 w-20 bg-tactical-olive mx-auto"></div>
             </div>
-            <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div class="space-y-6">
                     <div class="bg-tactical-gunmetal/50 p-6 rounded-xl border-l-4 border-red-600">
-                        <p class="text-lg italic">"Тривале носіння амуніції вагою понад 25 кг руйнує здоров'я бійців."</p>
+                        <p class="text-lg italic text-gray-300">"Постійне носіння бойової амуніції вагою понад 25-40 кг неминуче руйнує опорно-руховий апарат військовослужбовців."</p>
                     </div>
-                    <p class="text-gray-400 text-lg">
-                        Це призводить до хронічного болю, серйозних захворювань хребта, швидкої втомлюваності та значного зниження бойової ефективності. Більшість сучасних систем лише частково вирішують це питання.
+                    <p class="text-gray-400 text-lg leading-relaxed">
+                        Хронічний біль у спині, компресійні ураження хребта, швидке стомлення м'язів та затискання нервів суттєво знижують боєздатність підрозділів. Штурмові жилети та плитоноски тиснуть на плечовий пояс, перетискаючи судини та викликаючи осьове стиснення міжхребцевих дисків.
+                    </p>
+                    <p class="text-gray-400 text-lg leading-relaxed">
+                        Звичайні розвантажувальні системи (РПС) лише трохи перерозподіляють вагу, але не усувають компресійну силу тяжіння на хребет. Система <span class="text-white font-bold">РПС Євмінова</span> кардинально змінює фізику навантаження.
                     </p>
                 </div>
-                <div class="relative">
-                    <div class="aspect-video bg-tactical-olive/20 rounded-2xl flex items-center justify-center border border-tactical-olive/40 overflow-hidden">
-                        <span class="text-tactical-olive/50 font-military text-2xl uppercase tracking-widest">Атомічна Візуалізація</span>
-                        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
+                
+                <!-- Inline SVG: Anatomical Spine Unloading -->
+                <div class="w-full">
+                    <div class="text-center mb-2 font-military text-xs uppercase tracking-widest text-tactical-accent">
+                        Анатомічна схема розподілу навантаження
                     </div>
+                    <svg viewBox="0 0 600 450" class="w-full h-auto bg-[#0f110c]/80 rounded-2xl border border-tactical-olive/20 shadow-2xl" xmlns="http://www.w3.org/2000/svg">
+                      <defs>
+                        <linearGradient id="glow-green" x1="0%" y1="0%" x2="0%" y2="100%">
+                          <stop offset="0%" stop-color="#84cc16" stop-opacity="1"/>
+                          <stop offset="100%" stop-color="#4b5320" stop-opacity="1"/>
+                        </linearGradient>
+                        <linearGradient id="glow-red" x1="0%" y1="0%" x2="0%" y2="100%">
+                          <stop offset="0%" stop-color="#ef4444" stop-opacity="1"/>
+                          <stop offset="100%" stop-color="#991b1b" stop-opacity="1"/>
+                        </linearGradient>
+                        <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" stop-color="#fbbf24"/>
+                          <stop offset="100%" stop-color="#d97706"/>
+                        </linearGradient>
+                      </defs>
+                      <!-- Grid Background -->
+                      <path d="M 0,50 L 600,50 M 0,100 L 600,100 M 0,150 L 600,150 M 0,200 L 600,200 M 0,250 L 600,250 M 0,300 L 600,300 M 0,350 L 600,350 M 0,400 L 600,400" stroke="#1f241a" stroke-width="1" />
+                      <path d="M 50,0 L 50,450 M 100,0 L 100,450 M 150,0 L 150,450 M 200,0 L 200,450 M 250,0 L 250,450 M 300,0 L 300,450 M 350,0 L 350,450 M 400,0 L 400,450 M 450,0 L 450,450 M 500,0 L 500,450 M 550,0 L 550,450" stroke="#1f241a" stroke-width="1" />
+                      
+                      <!-- Spine Representation -->
+                      <g transform="translate(180, 50)">
+                        <!-- Skull silhouette base -->
+                        <path d="M -15,10 C -15,0, 15,0, 15,10 L 10,25 L -10,25 Z" fill="#374151" stroke="#4b5563" stroke-width="2"/>
+                        
+                        <!-- Vertebrae -->
+                        <!-- Cervical (7 bones) -->
+                        <g stroke="#9ca3af" stroke-width="1.5" fill="#1f2937">
+                          <rect x="-8" y="32" width="16" height="6" rx="2" />
+                          <rect x="-9" y="42" width="18" height="6" rx="2" />
+                          <rect x="-10" y="52" width="20" height="6" rx="2" />
+                          <rect x="-11" y="62" width="22" height="6" rx="2" />
+                          <rect x="-11" y="72" width="22" height="6" rx="2" />
+                          <rect x="-12" y="82" width="24" height="6" rx="2" />
+                          <rect x="-12" y="92" width="24" height="6" rx="2" />
+                        </g>
+                        <!-- Thoracic (12 bones) -->
+                        <g stroke="#9ca3af" stroke-width="1.5" fill="#374151">
+                          <rect x="-13" y="105" width="26" height="8" rx="2" />
+                          <rect x="-14" y="117" width="28" height="8" rx="2" />
+                          <rect x="-15" y="129" width="30" height="8" rx="2" />
+                          <rect x="-16" y="141" width="32" height="8" rx="2" />
+                          <rect x="-17" y="153" width="34" height="8" rx="2" />
+                          <rect x="-18" y="165" width="36" height="8" rx="2" />
+                          <rect x="-18" y="177" width="36" height="8" rx="2" />
+                          <rect x="-17" y="189" width="34" height="8" rx="2" />
+                          <rect x="-16" y="201" width="32" height="8" rx="2" />
+                          <rect x="-15" y="213" width="30" height="8" rx="2" />
+                          <rect x="-14" y="225" width="28" height="8" rx="2" />
+                          <rect x="-13" y="237" width="26" height="8" rx="2" />
+                        </g>
+                        <!-- Lumbar (5 bones, highlighted in gold) -->
+                        <g stroke="#fbbf24" stroke-width="1.5" fill="#4b5563">
+                          <rect x="-15" y="252" width="30" height="10" rx="3" />
+                          <rect x="-16" y="267" width="32" height="10" rx="3" />
+                          <rect x="-18" y="282" width="36" height="10" rx="3" />
+                          <rect x="-19" y="297" width="38" height="10" rx="3" />
+                          <rect x="-20" y="312" width="40" height="10" rx="3" />
+                        </g>
+                        <!-- Sacrum & Pelvis Base -->
+                        <path d="M -25,327 L 25,327 L 35,340 L 15,370 L -15,370 L -35,340 Z" fill="#1f2937" stroke="#fbbf24" stroke-width="2"/>
+                        <!-- Pelvis wings -->
+                        <path d="M -25,327 C -60,320, -75,350, -45,385 C -25,405, -15,390, -15,370 Z" fill="#374151" stroke="#fbbf24" stroke-width="2"/>
+                        <path d="M 25,327 C 60,320, 75,350, 45,385 C 25,405, 15,390, 15,370 Z" fill="#374151" stroke="#fbbf24" stroke-width="2"/>
+                      </g>
+
+                      <!-- Traditional Compression Force (Red arrows) -->
+                      <g transform="translate(180, 50)" opacity="0.85">
+                        <path d="M -45,30 L -45,80 M -45,80 L -50,72 M -45,80 L -40,72" stroke="url(#glow-red)" stroke-width="4" stroke-linecap="round"/>
+                        <path d="M 45,30 L 45,80 M 45,80 L 40,72 M 45,80 L 50,72" stroke="url(#glow-red)" stroke-width="4" stroke-linecap="round"/>
+                        <text x="-95" y="45" fill="#f87171" font-family="monospace" font-size="10" font-weight="bold">КОМПРЕСІЯ</text>
+                        <text x="-90" y="58" fill="#f87171" font-family="monospace" font-size="11" font-weight="bold">~25-40 КГ</text>
+                      </g>
+
+                      <!-- RPS Evminova Bypass Frame (Neon Green outline) -->
+                      <g transform="translate(180, 50)">
+                        <path d="M -45,60 L -60,110 L -60,250 L -45,335" fill="none" stroke="url(#glow-green)" stroke-width="5" stroke-linecap="round"/>
+                        <path d="M 45,60 L 60,110 L 60,250 L 45,335" fill="none" stroke="url(#glow-green)" stroke-width="5" stroke-linecap="round"/>
+                        
+                        <!-- Flow arrows -->
+                        <path d="M -57,110 L -57,150 M -57,150 L -62,142 M -57,150 L -52,142" stroke="#a3e635" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M 57,110 L 57,150 M 57,150 L 52,142 M 57,150 L 62,142" stroke="#a3e635" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M -59,200 L -59,240 M -59,240 L -64,232 M -59,240 L -54,232" stroke="#a3e635" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M 59,200 L 59,240 M 59,240 L 54,232 M 59,240 L 64,232" stroke="#a3e635" stroke-width="3" stroke-linecap="round"/>
+                        
+                        <!-- Weight landing zone -->
+                        <circle cx="-45" cy="335" r="5" fill="#a3e635"/>
+                        <circle cx="45" cy="335" r="5" fill="#a3e635"/>
+                        <path d="M -45,335 L -35,360 M -35,360 L -41,355 M -35,360 L -33,352" stroke="#a3e635" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M 45,335 L 35,360 M 35,360 L 33,352 M 35,360 L 41,355" stroke="#a3e635" stroke-width="3" stroke-linecap="round"/>
+                      </g>
+
+                      <!-- Labels -->
+                      <path d="M 135,90 L 70,90 L 70,140 L 90,140" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-dasharray="3,3" />
+                      <circle cx="135" cy="90" r="3" fill="#ef4444"/>
+                      <text x="15" y="130" fill="#f87171" font-family="sans-serif" font-size="11" font-weight="bold">Вага плитоноски</text>
+                      <text x="15" y="145" fill="#f87171" font-family="sans-serif" font-size="11" font-weight="bold">тисне на плечі</text>
+
+                      <path d="M 120,200 L 50,200 L 50,240 L 80,240" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-dasharray="3,3" />
+                      <circle cx="120" cy="200" r="3" fill="#a3e635"/>
+                      <text x="15" y="230" fill="#a3e635" font-family="sans-serif" font-size="11" font-weight="bold">Байпасна рельса</text>
+                      <text x="15" y="245" fill="#9ca3af" font-family="sans-serif" font-size="10">переносить силу в обхід хребта</text>
+
+                      <path d="M 180,345 L 90,345 L 90,320 L 110,320" fill="none" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="3,3" />
+                      <circle cx="180" cy="345" r="3" fill="#fbbf24"/>
+                      <text x="15" y="305" fill="#fbbf24" font-family="sans-serif" font-size="11" font-weight="bold">Поперек розвантажено</text>
+                      <text x="15" y="320" fill="#9ca3af" font-family="sans-serif" font-size="10">і фізіологічні вигини збережено</text>
+
+                      <path d="M 225,400 L 320,400 L 320,380 L 350,380" fill="none" stroke="#a3e635" stroke-width="1.5" stroke-dasharray="3,3" />
+                      <circle cx="225" cy="400" r="3" fill="#a3e635"/>
+                      <text x="330" y="365" fill="#a3e635" font-family="sans-serif" font-size="11" font-weight="bold">Клубові кістки таза</text>
+                      <text x="330" y="380" fill="#9ca3af" font-family="sans-serif" font-size="10">приймають 100% ваги спорядження</text>
+
+                      <text x="20" y="30" fill="#4b5320" font-family="monospace" font-size="10" font-weight="bold" letter-spacing="2">DIAGRAM_01: SPINE_UNLOADING</text>
+                    </svg>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Benefits Section -->
-    <section class="py-24 px-6 bg-tactical-gunmetal/30">
+    <!-- Technical Specs Section -->
+    <section id="benefits" class="py-24 px-6 bg-tactical-gunmetal/30 border-t border-white/5">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl md:text-5xl font-bold text-center mb-16">Чому ми кращі</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-16">Технічні інновації та переваги</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
                 <!-- Benefit 1 -->
-                <div class="bg-tactical-dark p-8 rounded-2xl border border-white/5 hover:border-tactical-olive transition-colors">
-                    <div class="text-tactical-olive mb-4 text-3xl">🛡️</div>
-                    <h3 class="text-xl font-bold mb-2">Універсальність</h3>
-                    <p class="text-gray-500 text-sm">Сумісна з усіма моделями плитоносок та бронежилетів. Не потрібно купувати новий захист.</p>
+                <div class="bg-tactical-dark p-8 rounded-2xl border border-white/5 hover:border-tactical-olive transition-colors flex flex-col justify-between">
+                    <div>
+                        <div class="text-tactical-accent mb-4 text-3xl">🛡️</div>
+                        <h3 class="text-xl font-bold mb-2 text-white">Сумісність</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Повна адаптація під будь-які стандартні плитоноски та бойові пояси (варбелти). Не потребує зміни штатної амуніції бійця.</p>
+                    </div>
                 </div>
                 <!-- Benefit 2 -->
-                <div class="bg-tactical-dark p-8 rounded-2xl border border-white/5 hover:border-tactical-olive transition-colors">
-                    <div class="text-tactical-olive mb-4 text-3xl">🏃</div>
-                    <h3 class="text-xl font-bold mb-2">Мобільність</h3>
-                    <p class="text-gray-500 text-sm">Не обмежує рухи (нахили, повороти) завдяки унікальному кріпленню "кукумбера".</p>
+                <div class="bg-tactical-dark p-8 rounded-2xl border border-white/5 hover:border-tactical-olive transition-colors flex flex-col justify-between">
+                    <div>
+                        <div class="text-tactical-accent mb-4 text-3xl">🏃</div>
+                        <h3 class="text-xl font-bold mb-2 text-white">Шарнір 360°</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Кріплення «Кукумбер» до направляючої рельси забезпечує повне обертання та свободу нахилів і поворотів корпусу без обмежень.</p>
+                    </div>
                 </div>
                 <!-- Benefit 3 -->
-                <div class="bg-tactical-dark p-8 rounded-2xl border border-white/5 hover:border-tactical-olive transition-colors">
-                    <div class="text-tactical-olive mb-4 text-3xl">⚡</div>
-                    <h3 class="text-xl font-bold mb-2">Швидкоскид</h3>
-                    <p class="text-gray-500 text-sm">Повністю збережена система швидкого скидання для екстрених ситуацій.</p>
+                <div class="bg-tactical-dark p-8 rounded-2xl border border-white/5 hover:border-tactical-olive transition-colors flex flex-col justify-between">
+                    <div>
+                        <div class="text-tactical-accent mb-4 text-3xl">⚡</div>
+                        <h3 class="text-xl font-bold mb-2 text-white">Швидкоскид</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Повністю збережена робота штатної системи екстреного скидання бронежилета. Система від'єднується миттєво в один рух.</p>
+                    </div>
                 </div>
                 <!-- Benefit 4 -->
-                <div class="bg-tactical-dark p-8 rounded-2xl border border-white/5 hover:border-tactical-olive transition-colors">
-                    <div class="text-tactical-olive mb-4 text-3xl">💰</div>
-                    <h3 class="text-xl font-bold mb-2">Ціна: 14 000 грн</h3>
-                    <p class="text-gray-500 text-sm">У рази дешевше закордонних аналогів при вищій функціональності.</p>
+                <div class="bg-tactical-dark p-8 rounded-2xl border border-white/5 hover:border-tactical-olive transition-colors flex flex-col justify-between">
+                    <div>
+                        <div class="text-tactical-accent mb-4 text-3xl">💰</div>
+                        <h3 class="text-xl font-bold mb-2 text-white">Доступність</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Вартість системи — <span class="text-tactical-accent font-bold">14 000 грн</span>. У рази дешевше іноземних екзоскелетних аналогів за значно вищої міцності.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Deep Tech Specs & Tactical SVG -->
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Inline SVG: Mechanical Hardware Interface -->
+                <div class="order-2 lg:order-1">
+                    <div class="text-center mb-2 font-military text-xs uppercase tracking-widest text-tactical-accent">
+                        Схема інтеграції та механічного кріплення
+                    </div>
+                    <svg viewBox="0 0 600 450" class="w-full h-auto bg-[#0f110c]/80 rounded-2xl border border-tactical-olive/20 shadow-2xl" xmlns="http://www.w3.org/2000/svg">
+                      <defs>
+                        <linearGradient id="metal-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                          <stop offset="0%" stop-color="#374151" />
+                          <stop offset="50%" stop-color="#6b7280" />
+                          <stop offset="100%" stop-color="#1f2937" />
+                        </linearGradient>
+                        <linearGradient id="olive-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" stop-color="#65a30d" />
+                          <stop offset="100%" stop-color="#3f6212" />
+                        </linearGradient>
+                        <linearGradient id="gold-neon" x1="0%" y1="0%" x2="0%" y2="100%">
+                          <stop offset="0%" stop-color="#fbbf24"/>
+                          <stop offset="100%" stop-color="#f59e0b"/>
+                        </linearGradient>
+                      </defs>
+                      <!-- Grid Background -->
+                      <path d="M 0,50 L 600,50 M 0,100 L 600,100 M 0,150 L 600,150 M 0,200 L 600,200 M 0,250 L 600,250 M 0,300 L 600,300 M 0,350 L 600,350 M 0,400 L 600,400" stroke="#1f241a" stroke-width="1" />
+                      <path d="M 50,0 L 50,450 M 100,0 L 100,450 M 150,0 L 150,450 M 200,0 L 200,450 M 250,0 L 250,450 M 300,0 L 300,450 M 350,0 L 350,450 M 400,0 L 400,450 M 450,0 L 450,450 M 500,0 L 500,450 M 550,0 L 550,450" stroke="#1f241a" stroke-width="1" />
+
+                      <!-- Drawing Plate Carrier -->
+                      <g transform="translate(300, 30)">
+                        <path d="M -80,0 L 80,0 L 100,50 L 60,110 L -60,110 L -100,50 Z" fill="#2d3020" stroke="#4b5320" stroke-width="3" fill-opacity="0.5"/>
+                        <text x="-45" y="30" fill="#9ca3af" font-family="sans-serif" font-size="10" font-weight="bold">ШТАТНА ПЛИТОНОСКА</text>
+                        
+                        <rect x="-50" y="45" width="100" height="8" fill="#1b1c11" stroke="#4b5320" stroke-width="1"/>
+                        <rect x="-50" y="60" width="100" height="8" fill="#1b1c11" stroke="#4b5320" stroke-width="1"/>
+                        <rect x="-50" y="75" width="100" height="8" fill="#1b1c11" stroke="#4b5320" stroke-width="1"/>
+
+                        <path d="M -25,80 L 25,80 L 20,115 L -20,115 Z" fill="url(#metal-grad)" stroke="#9ca3af" stroke-width="1.5"/>
+                        <circle cx="-10" cy="90" r="4" fill="#111827" stroke="#9ca3af" stroke-width="1"/>
+                        <circle cx="10" cy="90" r="4" fill="#111827" stroke="#9ca3af" stroke-width="1"/>
+                        <line x1="-10" y1="90" x2="-10" y2="115" stroke="#9ca3af" stroke-width="1.5"/>
+                        <line x1="10" y1="90" x2="10" y2="115" stroke="#9ca3af" stroke-width="1.5"/>
+                      </g>
+
+                      <!-- Vertical Support Rail -->
+                      <g transform="translate(300, 145)">
+                        <rect x="-10" y="0" width="20" height="150" rx="4" fill="url(#metal-grad)" stroke="#9ca3af" stroke-width="2"/>
+                        
+                        <circle cx="0" cy="20" r="3" fill="#0f110c" stroke="#9ca3af" stroke-width="1"/>
+                        <circle cx="0" cy="45" r="3" fill="#0f110c" stroke="#9ca3af" stroke-width="1"/>
+                        <circle cx="0" cy="70" r="3" fill="#0f110c" stroke="#9ca3af" stroke-width="1"/>
+                        <circle cx="0" cy="95" r="3" fill="#0f110c" stroke="#9ca3af" stroke-width="1"/>
+                        <circle cx="0" cy="120" r="3" fill="#0f110c" stroke="#9ca3af" stroke-width="1"/>
+
+                        <rect x="-14" y="5" width="28" height="12" rx="2" fill="#374151" stroke="#4b5563" stroke-width="1"/>
+                        <rect x="-14" y="130" width="28" height="12" rx="2" fill="#374151" stroke="#4b5563" stroke-width="1"/>
+                      </g>
+
+                      <!-- "Cucumber" Joint -->
+                      <g transform="translate(300, 290)">
+                        <path d="M -8,0 C -8,15, -15,25, -15,35 C -15,45, 0,55, 0,65" fill="none" stroke="#9ca3af" stroke-width="8" stroke-linecap="round"/>
+                        
+                        <circle cx="0" cy="65" r="14" fill="url(#gold-neon)" stroke="#111827" stroke-width="3"/>
+                        <circle cx="0" cy="65" r="4" fill="#ffffff" />
+                        
+                        <path d="M -25,65 C -25,50, 25,50, 25,65" fill="none" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="3,2"/>
+                        <path d="M -25,65 C -25,80, 25,80, 25,65" fill="none" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="3,2"/>
+                        <path d="M -23,60 L -25,65 L -20,67" stroke="#fbbf24" stroke-width="1.5" fill="none"/>
+                        <path d="M 23,70 L 25,65 L 20,63" stroke="#fbbf24" stroke-width="1.5" fill="none"/>
+
+                        <path d="M -14,50 A 18,18 0 1,1 14,50" fill="none" stroke="#fbbf24" stroke-width="2"/>
+                        <path d="M 10,46 L 14,50 L 10,54" stroke="#fbbf24" stroke-width="2" fill="none"/>
+                      </g>
+
+                      <!-- Tactical Warbelt -->
+                      <g transform="translate(300, 370)">
+                        <path d="M -150,0 C -100,20, 100,20, 150,0 L 130,40 C 80,45, -80,45, -130,40 Z" fill="url(#olive-grad)" stroke="#4b5320" stroke-width="3"/>
+                        
+                        <rect x="-100" y="12" width="40" height="12" rx="1" fill="#1e293b" stroke="#3f6212" stroke-width="1"/>
+                        <rect x="-50" y="15" width="40" height="12" rx="1" fill="#1e293b" stroke="#3f6212" stroke-width="1"/>
+                        <rect x="10" y="15" width="40" height="12" rx="1" fill="#1e293b" stroke="#3f6212" stroke-width="1"/>
+                        <rect x="60" y="12" width="40" height="12" rx="1" fill="#1e293b" stroke="#3f6212" stroke-width="1"/>
+
+                        <rect x="-20" y="-12" width="40" height="20" rx="3" fill="#1f2937" stroke="#9ca3af" stroke-width="2"/>
+                        <circle cx="0" cy="-2" r="5" fill="#9ca3af"/>
+                        
+                        <text x="-40" y="32" fill="#e2e8f0" font-family="sans-serif" font-size="10" font-weight="bold">ТАКТИЧНИЙ ВАРБЕЛТ (ПОЯС)</text>
+                      </g>
+
+                      <!-- Labels -->
+                      <path d="M 280,110 L 220,110 M 220,110 L 140,140" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-dasharray="3,3" />
+                      <circle cx="280" cy="110" r="3" fill="#9ca3af"/>
+                      <text x="25" y="150" fill="#e2e8f0" font-family="sans-serif" font-size="11" font-weight="bold">Вузол кріплення</text>
+                      <text x="25" y="165" fill="#9ca3af" font-family="sans-serif" font-size="10">надійно фіксує конструкцію</text>
+                      <text x="25" y="177" fill="#9ca3af" font-family="sans-serif" font-size="10">до строп MOLLE плитоноски</text>
+
+                      <path d="M 310,210 L 370,210 M 370,210 L 440,190" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-dasharray="3,3" />
+                      <circle cx="310" cy="210" r="3" fill="#9ca3af"/>
+                      <text x="445" y="180" fill="#e2e8f0" font-family="sans-serif" font-size="11" font-weight="bold">Направляюча рельса</text>
+                      <text x="445" y="195" fill="#9ca3af" font-family="sans-serif" font-size="10">телескопічний стрижень</text>
+                      <text x="445" y="207" fill="#9ca3af" font-family="sans-serif" font-size="10">забезпечує міцну опору ваги</text>
+
+                      <path d="M 285,340 L 210,340 M 210,340 L 140,280" fill="none" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="3,3" />
+                      <circle cx="285" cy="340" r="3" fill="#fbbf24"/>
+                      <text x="25" y="260" fill="#fbbf24" font-family="sans-serif" font-size="11" font-weight="bold">Шарнір «Кукумбер»</text>
+                      <text x="25" y="275" fill="#9ca3af" font-family="sans-serif" font-size="10">захищає хребет під час нахилів</text>
+                      <text x="25" y="287" fill="#9ca3af" font-family="sans-serif" font-size="10">та обертання таза на 360°</text>
+
+                      <path d="M 320,365 L 390,365 M 390,365 L 450,320" fill="none" stroke="#a3e635" stroke-width="1.5" stroke-dasharray="3,3" />
+                      <circle cx="320" cy="365" r="3" fill="#a3e635"/>
+                      <text x="445" y="300" fill="#a3e635" font-family="sans-serif" font-size="11" font-weight="bold">Базовий варбелт</text>
+                      <text x="445" y="315" fill="#9ca3af" font-family="sans-serif" font-size="10">приймає вагу і рівномірно</text>
+                      <text x="445" y="327" fill="#9ca3af" font-family="sans-serif" font-size="10">розподіляє її по колу таза</text>
+
+                      <text x="20" y="30" fill="#4b5320" font-family="monospace" font-size="10" font-weight="bold" letter-spacing="2">DIAGRAM_02: MECHANICAL_INTERFACE</text>
+                    </svg>
+                </div>
+
+                <!-- Technical Specs Text Details -->
+                <div class="order-1 lg:order-2 space-y-6">
+                    <h3 class="text-2xl md:text-3xl font-bold text-white uppercase">Технічні Специфікації</h3>
+                    <div class="h-1 w-12 bg-tactical-olive"></div>
+                    
+                    <ul class="space-y-4 text-gray-300">
+                        <li class="flex items-start gap-3">
+                            <span class="text-tactical-accent font-bold">●</span>
+                            <div>
+                                <strong class="text-white">Вага системи:</strong> всього <span class="text-tactical-accent font-bold">950 грамів</span>. Жодного зайвого навантаження за рахунок використання аерокосмічних сплавів Д16Т.
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-tactical-accent font-bold">●</span>
+                            <div>
+                                <strong class="text-white">Матеріали:</strong> анодований алюміній підвищеної в'язкості, балістичний пластик та високоміцна оригінальна тканина Cordura 1000D з IRR-просоченням.
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-tactical-accent font-bold">●</span>
+                            <div>
+                                <strong class="text-white">Ергономіка:</strong> плавне регулювання висоти рельси під зріст бійця від 165 до 200 см за лічені хвилини.
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-tactical-accent font-bold">●</span>
+                            <div>
+                                <strong class="text-white">Надійність:</strong> металевий каркас витримує статичне та динамічне навантаження до 120 кг, захищаючи хребці навіть під час десантування чи падіння на спину.
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Expert Opinions -->
-    <section class="py-24 px-6 bg-tactical-dark">
+    <!-- Medical Section -->
+    <section id="medical" class="py-24 px-6 bg-tactical-dark border-t border-white/5">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-16 italic">Експертна оцінка</h2>
-            <div class="space-y-12">
-                <div class="flex flex-col md:flex-row gap-8 items-start">
-                    <div class="w-24 h-24 rounded-full bg-tactical-olive/30 flex-shrink-0 border-2 border-tactical-olive"></div>
-                    <div>
-                        <h4 class="text-xl font-bold text-white uppercase">Микола Поліщук</h4>
-                        <p class="text-tactical-olive text-sm mb-4">Нейрохірург, екс-міністр охорони здоров'я</p>
-                        <p class="text-gray-400 leading-relaxed italic">"Система попереджає дегенеративні зміни у хребті, відновлює дихання та зберігає нейром'язову стабільність. Рекомендована до впровадження в ЗСУ."</p>
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-16">Медичне обґрунтування системи</h2>
+            
+            <!-- Structured Medical Arguments -->
+            <div class="bg-tactical-gunmetal/20 p-8 rounded-3xl border border-white/5 mb-16 space-y-8">
+                <h3 class="text-xl md:text-2xl font-bold text-tactical-accent uppercase tracking-wide border-b border-white/5 pb-4">Анатомічні ефекти розвантаження РПС Євмінова:</h3>
+                
+                <div class="grid gap-6">
+                    <div class="flex gap-4">
+                        <div class="w-8 h-8 rounded-full bg-tactical-olive/30 flex items-center justify-center text-tactical-accent font-bold flex-shrink-0">1</div>
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-1">Розвантаження поперекового лордозу та грудного кіфозу</h4>
+                            <p class="text-gray-400 text-sm leading-relaxed">Система бере на себе роль додаткового опорного стовпа, запобігаючи деформації та підтримуючи природні вигини хребта під великим навантаженням.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-4">
+                        <div class="w-8 h-8 rounded-full bg-tactical-olive/30 flex items-center justify-center text-tactical-accent font-bold flex-shrink-0">2</div>
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-1">Повне перенесення осьової ваги з плечей на таз</h4>
+                            <p class="text-gray-400 text-sm leading-relaxed">Вся вертикальна маса плитоноски і рюкзака через рельсу та шарнір «Кукумбер» передається безпосередньо на міцні клубові кістки таза, які є природною силовою опорою скелета людини.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-4">
+                        <div class="w-8 h-8 rounded-full bg-tactical-olive/30 flex items-center justify-center text-tactical-accent font-bold flex-shrink-0">3</div>
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-1">Надійна профілактика протрузій та гриж</h4>
+                            <p class="text-gray-400 text-sm leading-relaxed">Усунення осьового компресійного тиску зупиняє процес сплющування та стирання міжхребцевих дисків. Это запобігає защемленню нервових корінців і виникненню радикуліту або гриж у бойових умовах.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-4">
+                        <div class="w-8 h-8 rounded-full bg-tactical-olive/30 flex items-center justify-center text-tactical-accent font-bold flex-shrink-0">4</div>
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-1">Відновлення природного бойового дихання</h4>
+                            <p class="text-gray-400 text-sm leading-relaxed">Звільнення плечового пояса та грудної клітки від тиску ременів бронежилета дозволяє бійцю дихати на повні груди. Це нормалізує надходження кисню (сатурацію), знижує пульс та запобігає задишці при інтенсивних штурмових діях.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="flex flex-col md:flex-row gap-8 items-start">
-                    <div class="w-24 h-24 rounded-full bg-tactical-gunmetal flex-shrink-0 border-2 border-tactical-gunmetal"></div>
+            </div>
+
+            <!-- Expert Testimonials -->
+            <div class="space-y-12">
+                <div class="flex flex-col md:flex-row gap-8 items-start bg-tactical-gunmetal/10 p-6 rounded-2xl border border-white/5">
+                    <div class="w-20 h-20 rounded-full bg-tactical-olive/30 flex-shrink-0 border-2 border-tactical-olive flex items-center justify-center text-3xl">👨‍⚕️</div>
+                    <div>
+                        <h4 class="text-xl font-bold text-white uppercase">Микола Поліщук</h4>
+                        <p class="text-tactical-accent text-xs mb-4 uppercase tracking-wider">Нейрохірург, професор, екс-міністр охорони здоров'я України</p>
+                        <p class="text-gray-400 leading-relaxed italic">"Система повністю компенсує дегенеративні та травматичні чинники носіння важкого бойового спорядження. Вона повертає природну біомеханіку, убезпечує спинний мозок і зберігає нейром'язову стабільність. Рекомендована до масштабного впровадження у Збройних Силах України."</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-8 items-start bg-tactical-gunmetal/10 p-6 rounded-2xl border border-white/5">
+                    <div class="w-20 h-20 rounded-full bg-tactical-olive/30 flex-shrink-0 border-2 border-tactical-olive flex items-center justify-center text-3xl">🦾</div>
                     <div>
                         <h4 class="text-xl font-bold text-white uppercase">В'ячеслав Євмінов</h4>
-                        <p class="text-tactical-olive text-sm mb-4">Розробник методики профілактики хребта</p>
-                        <p class="text-gray-400 leading-relaxed italic">"Система працює за принципом ортопедичних корсетів. Більше 150 тестових випробувань підрозділами Сил оборони довели її ефективність."</p>
+                        <p class="text-tactical-accent text-xs mb-4 uppercase tracking-wider">Президент ПП «Центр Євмінова», розробник ортопедичної методики</p>
+                        <p class="text-gray-400 leading-relaxed italic">"Тактичний розвантажувальний корсет працює за принципами нашої науково доведеної системи профілактики хребта. Ми провели понад 150 випробувань у реальних бойових підрозділах сил оборони — бійці підтверджують повне усунення втоми спини навіть після доби носіння амуніції."</p>
                     </div>
                 </div>
             </div>
@@ -159,11 +488,11 @@
     </section>
 
     <!-- Training Module (PWA App Part) -->
-    <section id="training" class="py-24 px-6 bg-tactical-dark min-h-screen border-t border-tactical-olive/20">
+    <section id="training" class="py-24 px-6 bg-tactical-dark border-t border-tactical-olive/20">
         <div class="max-w-xl mx-auto">
             <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-white mb-2">Тренувальний Хаб</h2>
-                <p class="text-tactical-olive font-military tracking-widest text-sm uppercase">Профілактор Євмінова</p>
+                <h2 class="text-4xl font-bold text-white mb-2">Тренувальний хаб відновлення</h2>
+                <p class="text-tactical-olive font-military tracking-widest text-sm uppercase">Профілактор Євмінова (Базові тракційні вправи)</p>
             </div>
 
             <!-- Training UI -->
@@ -171,7 +500,7 @@
                 
                 <!-- Angle Selector -->
                 <div class="mb-10">
-                    <label class="block text-xs uppercase text-gray-500 font-bold mb-4 tracking-tighter">Оберіть кут нахилу дошки (°)</label>
+                    <label class="block text-xs uppercase text-gray-500 font-bold mb-4 tracking-tighter">Оберіть кут нахилу профілактора (°)</label>
                     <div class="flex justify-between gap-2">
                         <button onclick="setAngle(15)" class="angle-btn bg-tactical-dark px-4 py-2 rounded border border-white/10 text-sm">15°</button>
                         <button onclick="setAngle(30)" class="angle-btn bg-tactical-dark px-4 py-2 rounded border border-white/10 text-sm">30°</button>
@@ -182,8 +511,8 @@
 
                 <!-- Active Exercise -->
                 <div class="text-center mb-10">
-                    <div id="exercise-name" class="text-2xl font-bold mb-2">Напіввисі</div>
-                    <div id="exercise-desc" class="text-sm text-gray-500 italic">Розслаблення м'язів спини, витяжіння</div>
+                    <div id="exercise-name" class="text-2xl font-bold mb-2 text-white">Напіввиси</div>
+                    <div id="exercise-desc" class="text-sm text-gray-400 italic">Розслаблення м'язів спини та м'яке витягування хребта</div>
                 </div>
 
                 <!-- Timer -->
@@ -192,48 +521,104 @@
                         00:30
                     </div>
                     <div class="flex gap-4">
-                        <button onclick="toggleTimer()" id="timer-btn" class="bg-tactical-olive text-white px-8 py-3 rounded-full font-bold uppercase tracking-widest shadow-lg shadow-tactical-olive/20">Старт</button>
-                        <button onclick="resetTimer()" class="bg-tactical-dark text-gray-400 px-8 py-3 rounded-full font-bold uppercase tracking-widest border border-white/10">Скидання</button>
+                        <button onclick="toggleTimer()" id="timer-btn" class="bg-tactical-olive hover:bg-tactical-olive/80 text-white px-8 py-3 rounded-full font-bold uppercase tracking-widest shadow-lg shadow-tactical-olive/20 transition-all">Старт</button>
+                        <button onclick="resetTimer()" class="bg-tactical-dark hover:bg-tactical-dark/80 text-gray-400 px-8 py-3 rounded-full font-bold uppercase tracking-widest border border-white/10 transition-all">Скинути</button>
                     </div>
                 </div>
 
                 <!-- Counter -->
                 <div class="flex justify-around border-t border-white/5 pt-8">
                     <div class="text-center">
-                        <div class="text-xs text-gray-500 uppercase mb-1">Підходи</div>
-                        <div id="set-count" class="text-3xl font-bold">0/4</div>
+                        <div class="text-xs text-gray-500 uppercase mb-1">Виконано підходів</div>
+                        <div id="set-count" class="text-3xl font-bold text-white">0/4</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-xs text-gray-500 uppercase mb-1">Кут</div>
-                        <div id="current-angle" class="text-3xl font-bold">30°</div>
+                        <div class="text-xs text-gray-500 uppercase mb-1">Кут нахилу</div>
+                        <div id="current-angle" class="text-3xl font-bold text-white">30°</div>
                     </div>
                 </div>
             </div>
 
             <!-- Program Selector -->
             <div class="mt-8 grid grid-cols-2 gap-4">
-                <button onclick="selectProgram('power')" class="bg-tactical-dark p-4 rounded-xl border border-white/5 text-left hover:border-tactical-olive">
-                    <div class="text-tactical-olive font-bold">Силова</div>
-                    <div class="text-[10px] text-gray-500 uppercase tracking-tighter">Для зміцнення каркасу</div>
+                <button onclick="selectProgram('power')" class="bg-tactical-dark p-4 rounded-xl border border-white/5 text-left hover:border-tactical-olive transition-colors">
+                    <div class="text-tactical-accent font-bold">Силова програма</div>
+                    <div class="text-[10px] text-gray-500 uppercase tracking-tighter">Для зміцнення м'язового корсета</div>
                 </button>
-                <button onclick="selectProgram('rehab')" class="bg-tactical-dark p-4 rounded-xl border border-white/5 text-left hover:border-tactical-olive">
-                    <div class="text-tactical-olive font-bold">Реабілітація</div>
-                    <div class="text-[10px] text-gray-500 uppercase tracking-tighter">Після навантажень</div>
+                <button onclick="selectProgram('rehab')" class="bg-tactical-dark p-4 rounded-xl border border-white/5 text-left hover:border-tactical-olive transition-colors">
+                    <div class="text-tactical-accent font-bold">Програма реабілітації</div>
+                    <div class="text-[10px] text-gray-500 uppercase tracking-tighter">Для відновлення після навантажень</div>
                 </button>
             </div>
         </div>
     </section>
 
-    <!-- Media Section -->
-    <section class="py-24 px-6 bg-tactical-dark/50">
-        <div class="max-w-5xl mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-12">Демонстрація Системи</h2>
-            <div class="aspect-video bg-black rounded-3xl overflow-hidden shadow-2xl relative border border-white/10">
-                <div class="absolute inset-0 flex flex-col items-center justify-center bg-tactical-olive/10 group cursor-pointer">
-                    <div class="w-20 h-20 bg-tactical-accent rounded-full flex items-center justify-center text-tactical-dark text-3xl pl-2 group-hover:scale-110 transition-transform">
-                        ▶
+    <!-- Media Section (Interactive Video Gallery) -->
+    <section id="media" class="py-24 px-6 bg-tactical-dark/50 border-t border-white/5">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-4">Презентація та польові тести</h2>
+            <p class="text-gray-400 text-center mb-16 max-w-xl mx-auto text-sm md:text-base">Ознайомтесь із реальними випробуваннями системи РПС Євмінова силами оборони України та репортажами військових експертів.</p>
+            
+            <div class="grid lg:grid-cols-3 gap-8 items-start">
+                <!-- Featured Video Player (2/3 width on desktop) -->
+                <div class="lg:col-span-2 space-y-4">
+                    <div class="aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl relative border border-tactical-olive/30 shadow-tactical-olive/5">
+                        <iframe id="main-video-player" class="w-full h-full" src="https://www.youtube.com/embed/X-v5XyT1XwU" title="РПС Євмінова" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
-                    <p class="mt-6 font-military text-white tracking-widest">Дивитися відео презентацію (Київ24)</p>
+                    <div class="bg-tactical-gunmetal/20 p-6 rounded-2xl border border-white/5">
+                        <span class="text-tactical-accent font-military text-xs uppercase tracking-widest block mb-2">ПОТОЧНЕ ВІДЕО</span>
+                        <h3 id="video-title" class="text-xl md:text-2xl font-bold text-white uppercase">Репортаж телеканалу КИЇВ24</h3>
+                        <p id="video-desc" class="text-gray-400 text-sm mt-3 leading-relaxed">Ексклюзивний сюжет про РПС Євмінова за участі полковника Сил оборони Володимира Стецюка та головного інженера-розробника з позивним «Тул».</p>
+                    </div>
+                </div>
+
+                <!-- Playlist / Video Selector (1/3 width on desktop) -->
+                <div class="space-y-4">
+                    <h4 class="font-military text-xs uppercase tracking-widest text-gray-400 mb-2">Оберіть відеоматеріал:</h4>
+                    
+                    <!-- Video 1 (Active by default) -->
+                    <div onclick="selectVideo('X-v5XyT1XwU', this)" class="video-card cursor-pointer p-4 rounded-xl border border-tactical-accent bg-tactical-olive/20 hover:border-tactical-accent transition-all">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded bg-red-600/20 text-red-500 flex items-center justify-center font-bold text-lg">▶</div>
+                            <div>
+                                <h5 class="text-sm font-bold text-white uppercase">Репортаж КИЇВ24</h5>
+                                <p class="text-[10px] text-gray-400 uppercase tracking-tighter mt-0.5">Огляд Сюжету • 4:26</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video 2 -->
+                    <div onclick="selectVideo('6aK2kpcq2Z0', this)" class="video-card cursor-pointer p-4 rounded-xl border border-white/5 bg-tactical-dark hover:border-tactical-olive transition-all">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded bg-red-600/20 text-red-500 flex items-center justify-center font-bold text-lg">▶</div>
+                            <div>
+                                <h5 class="text-sm font-bold text-white uppercase">Мобільність 360°</h5>
+                                <p class="text-[10px] text-gray-400 uppercase tracking-tighter mt-0.5">YouTube Shorts • 0:59</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video 3 -->
+                    <div onclick="selectVideo('RqKDdvtqbk8', this)" class="video-card cursor-pointer p-4 rounded-xl border border-white/5 bg-tactical-dark hover:border-tactical-olive transition-all">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded bg-red-600/20 text-red-500 flex items-center justify-center font-bold text-lg">▶</div>
+                            <div>
+                                <h5 class="text-sm font-bold text-white uppercase">Технічний огляд</h5>
+                                <p class="text-[10px] text-gray-400 uppercase tracking-tighter mt-0.5">Інструкція та збірка • 8:12</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video 4 -->
+                    <div onclick="selectVideo('NBxzUCDOxh4', this)" class="video-card cursor-pointer p-4 rounded-xl border border-white/5 bg-tactical-dark hover:border-tactical-olive transition-all">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded bg-red-600/20 text-red-500 flex items-center justify-center font-bold text-lg">▶</div>
+                            <div>
+                                <h5 class="text-sm font-bold text-white uppercase">Польові тести ЗСУ</h5>
+                                <p class="text-[10px] text-gray-400 uppercase tracking-tighter mt-0.5">Випробування • 5:45</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -247,7 +632,7 @@
                     <span class="text-white">РПС</span> ЄВМІНОВА
                 </div>
                 <p class="text-gray-500 text-sm leading-relaxed">
-                    Ми створюємо інструменти для тих, хто тримає небо на своїх плечах. Здоров'я хребта — це боєздатність нації.
+                    Ми створюємо інструменти для тих, хто тримає небо на своїх плечах. Здоров'я хребта — це збереження боєздатності нації та наближення нашої Перемоги.
                 </p>
             </div>
             <div>
@@ -255,7 +640,7 @@
                 <ul class="space-y-4 text-gray-500 text-sm">
                     <li>📍 ПП «Центр Євмінова», м. Київ, вул. Костьольна, 9</li>
                     <li>📞 +38 (044) 270-70-11</li>
-                    <li>🌐 <a href="https://evminov.com" class="text-tactical-olive hover:text-tactical-accent">evminov.com</a></li>
+                    <li>🌐 <a href="https://evminov.com" target="_blank" class="text-tactical-olive hover:text-tactical-accent transition-colors">evminov.com</a></li>
                 </ul>
             </div>
             <div>
@@ -268,7 +653,7 @@
             </div>
         </div>
         <div class="max-w-6xl mx-auto mt-16 pt-8 border-t border-white/5 text-center text-[10px] text-gray-700 uppercase tracking-widest">
-            © 2026 РПС ЄВМІНОВА. ТАКТИЧНЕ РІШЕННЯ.
+            © 2026 РПС ЄВМІНОВА. АНАТОМІЧНІ ТАКТИЧНІ СИСТЕМИ.
         </div>
     </footer>
 
