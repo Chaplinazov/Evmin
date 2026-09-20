@@ -52,34 +52,48 @@
 <body class="overflow-x-hidden">
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 bg-tactical-dark/95 backdrop-blur-md border-b border-tactical-olive/30 py-4 px-6 flex justify-between items-center">
-        <div class="text-xl md:text-2xl font-bold text-tactical-olive flex items-center gap-2">
+    <nav class="fixed top-0 w-full z-50 bg-tactical-dark/95 backdrop-blur-md border-b border-tactical-olive/30 py-3 px-4 md:px-6 flex justify-between items-center">
+        <div class="text-lg md:text-2xl font-bold text-tactical-olive flex items-center gap-1.5 flex-shrink-0">
             <span class="text-white">РПС</span> ЄВМІНОВА
         </div>
-        <div class="hidden md:flex gap-6 items-center">
-            <a href="#about" class="text-xs uppercase tracking-wider font-bold text-gray-300 hover:text-tactical-accent transition-colors">Про систему</a>
-            <a href="#benefits" class="text-xs uppercase tracking-wider font-bold text-gray-300 hover:text-tactical-accent transition-colors">Характеристики</a>
-            <a href="#medical" class="text-xs uppercase tracking-wider font-bold text-gray-300 hover:text-tactical-accent transition-colors">Медицина</a>
-            <a href="#media" class="text-xs uppercase tracking-wider font-bold text-gray-300 hover:text-tactical-accent transition-colors">Відео</a>
-            <a href="#training" class="text-xs uppercase tracking-wider font-bold text-tactical-accent border border-tactical-accent/30 px-3 py-1 rounded hover:bg-tactical-accent/10 transition-colors">Тренування</a>
-        </div>
-        <div class="md:hidden">
-            <a href="#training" class="text-[10px] uppercase tracking-widest font-bold text-tactical-accent border border-tactical-accent/50 px-2 py-1 rounded">Тренування</a>
+        
+        <div class="flex items-center gap-4">
+            <!-- Desktop menu links -->
+            <div class="hidden md:flex gap-6 items-center">
+                <a href="#about" data-i18n="nav_about" class="text-xs uppercase tracking-wider font-bold text-gray-300 hover:text-tactical-accent transition-colors">Про систему</a>
+                <a href="#benefits" data-i18n="nav_benefits" class="text-xs uppercase tracking-wider font-bold text-gray-300 hover:text-tactical-accent transition-colors">Характеристики</a>
+                <a href="#medical" data-i18n="nav_medical" class="text-xs uppercase tracking-wider font-bold text-gray-300 hover:text-tactical-accent transition-colors">Медицина</a>
+                <a href="#media" data-i18n="nav_media" class="text-xs uppercase tracking-wider font-bold text-gray-300 hover:text-tactical-accent transition-colors">Відео</a>
+                <a href="#training" data-i18n="nav_training" class="text-xs uppercase tracking-wider font-bold text-tactical-accent border border-tactical-accent/30 px-3 py-1 rounded hover:bg-tactical-accent/10 transition-colors">Тренування</a>
+            </div>
+            
+            <!-- Mobile training button -->
+            <div class="md:hidden flex items-center">
+                <a href="#training" data-i18n="nav_training" class="text-[10px] uppercase tracking-widest font-bold text-tactical-accent border border-tactical-accent/50 px-2 py-1 rounded">Тренування</a>
+            </div>
+
+            <!-- Persistent Language Switcher -->
+            <div class="flex items-center gap-1 border border-tactical-olive/30 bg-tactical-dark/80 px-1.5 py-0.5 rounded">
+                <button onclick="setLanguage('ua')" id="lang-ua" class="lang-btn text-[10px] font-bold px-1.5 py-0.5 rounded transition-all text-tactical-accent bg-tactical-olive/30">UA</button>
+                <button onclick="setLanguage('en')" id="lang-en" class="lang-btn text-[10px] font-bold px-1.5 py-0.5 rounded transition-all text-gray-400 hover:text-white">EN</button>
+                <button onclick="setLanguage('pl')" id="lang-pl" class="lang-btn text-[10px] font-bold px-1.5 py-0.5 rounded transition-all text-gray-400 hover:text-white">PL</button>
+                <button onclick="setLanguage('ru')" id="lang-ru" class="lang-btn text-[10px] font-bold px-1.5 py-0.5 rounded transition-all text-gray-400 hover:text-white">RU</button>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="relative min-h-screen flex items-center justify-center pt-24 px-6 bg-tactical-gradient">
         <div class="max-w-4xl text-center">
-            <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            <h1 data-i18n="hero_title" class="text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
                 АНАТОМІЧНЕ <span class="text-tactical-olive">РОЗВАНТАЖЕННЯ</span> ДЛЯ ЗАХИСНИКІВ
             </h1>
-            <p class="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+            <p data-i18n="hero_desc" class="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
                 Революційна запатентована тактична система, яка повністю переносить <span class="text-white font-bold">100% ваги бронезахисту</span> та рюкзака з плечового пояса на кістки таза, зберігаючи здоров'я хребта.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#about" class="btn-tactical text-white px-8 py-4 rounded-lg font-bold text-sm md:text-base uppercase tracking-widest">Дізнатися більше</a>
-                <a href="#benefits" class="bg-tactical-gunmetal hover:bg-tactical-gunmetal/80 text-white px-8 py-4 rounded-lg font-bold text-sm md:text-base uppercase tracking-widest border border-white/10 transition-all">Характеристики</a>
+                <a href="#about" data-i18n="hero_btn_more" class="btn-tactical text-white px-8 py-4 rounded-lg font-bold text-sm md:text-base uppercase tracking-widest">Дізнатися більше</a>
+                <a href="#benefits" data-i18n="hero_btn_specs" class="bg-tactical-gunmetal hover:bg-tactical-gunmetal/80 text-white px-8 py-4 rounded-lg font-bold text-sm md:text-base uppercase tracking-widest border border-white/10 transition-all">Характеристики</a>
             </div>
         </div>
     </section>
@@ -88,25 +102,25 @@
     <section id="about" class="py-24 px-6 bg-tactical-dark border-t border-white/5">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-5xl font-bold mb-4">Критична проблема екіпірування</h2>
+                <h2 data-i18n="prob_title" class="text-3xl md:text-5xl font-bold mb-4">Критична проблема екіпірування</h2>
                 <div class="h-1 w-20 bg-tactical-olive mx-auto"></div>
             </div>
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div class="space-y-6">
                     <div class="bg-tactical-gunmetal/50 p-6 rounded-xl border-l-4 border-red-600">
-                        <p class="text-lg italic text-gray-300">"Постійне носіння бойової амуніції вагою понад 25-40 кг неминуче руйнує опорно-руховий апарат військовослужбовців."</p>
+                        <p data-i18n="prob_quote" class="text-lg italic text-gray-300">"Постійне носіння бойової амуніції вагою понад 25-40 кг неминуче руйнує опорно-руховий апарат військовослужбовців."</p>
                     </div>
-                    <p class="text-gray-400 text-lg leading-relaxed">
+                    <p data-i18n="prob_desc_1" class="text-gray-400 text-lg leading-relaxed">
                         Хронічний біль у спині, компресійні ураження хребта, швидке стомлення м'язів та затискання нервів суттєво знижують боєздатність підрозділів. Штурмові жилети та плитоноски тиснуть на плечовий пояс, перетискаючи судини та викликаючи осьове стиснення міжхребцевих дисків.
                     </p>
-                    <p class="text-gray-400 text-lg leading-relaxed">
+                    <p data-i18n="prob_desc_2" class="text-gray-400 text-lg leading-relaxed">
                         Звичайні розвантажувальні системи (РПС) лише трохи перерозподіляють вагу, але не усувають компресійну силу тяжіння на хребет. Система <span class="text-white font-bold">РПС Євмінова</span> кардинально змінює фізику навантаження.
                     </p>
                 </div>
                 
                 <!-- Inline SVG: Anatomical Spine Unloading -->
                 <div class="w-full">
-                    <div class="text-center mb-2 font-military text-xs uppercase tracking-widest text-tactical-accent">
+                    <div data-i18n="diagram_01_title" class="text-center mb-2 font-military text-xs uppercase tracking-widest text-tactical-accent">
                         Анатомічна схема розподілу навантаження
                     </div>
                     <svg viewBox="0 0 600 450" class="w-full h-auto bg-[#0f110c]/80 rounded-2xl border border-tactical-olive/20 shadow-2xl" xmlns="http://www.w3.org/2000/svg">
@@ -178,7 +192,7 @@
                       <g transform="translate(180, 50)" opacity="0.85">
                         <path d="M -45,30 L -45,80 M -45,80 L -50,72 M -45,80 L -40,72" stroke="url(#glow-red)" stroke-width="4" stroke-linecap="round"/>
                         <path d="M 45,30 L 45,80 M 45,80 L 40,72 M 45,80 L 50,72" stroke="url(#glow-red)" stroke-width="4" stroke-linecap="round"/>
-                        <text x="-95" y="45" fill="#f87171" font-family="monospace" font-size="10" font-weight="bold">КОМПРЕСІЯ</text>
+                        <text data-i18n="svg_1_compression" x="-95" y="45" fill="#f87171" font-family="monospace" font-size="10" font-weight="bold">КОМПРЕСІЯ</text>
                         <text x="-90" y="58" fill="#f87171" font-family="monospace" font-size="11" font-weight="bold">~25-40 КГ</text>
                       </g>
 
@@ -203,25 +217,25 @@
                       <!-- Labels -->
                       <path d="M 135,90 L 70,90 L 70,140 L 90,140" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-dasharray="3,3" />
                       <circle cx="135" cy="90" r="3" fill="#ef4444"/>
-                      <text x="15" y="130" fill="#f87171" font-family="sans-serif" font-size="11" font-weight="bold">Вага плитоноски</text>
-                      <text x="15" y="145" fill="#f87171" font-family="sans-serif" font-size="11" font-weight="bold">тисне на плечі</text>
+                      <text data-i18n="svg_1_weight_label" x="15" y="130" fill="#f87171" font-family="sans-serif" font-size="11" font-weight="bold">Вага плитоноски</text>
+                      <text data-i18n="svg_1_weight_sub" x="15" y="145" fill="#f87171" font-family="sans-serif" font-size="11" font-weight="bold">тисне на плечі</text>
 
                       <path d="M 120,200 L 50,200 L 50,240 L 80,240" fill="none" stroke="#4b5563" stroke-width="1.5" stroke-dasharray="3,3" />
                       <circle cx="120" cy="200" r="3" fill="#a3e635"/>
-                      <text x="15" y="230" fill="#a3e635" font-family="sans-serif" font-size="11" font-weight="bold">Байпасна рельса</text>
-                      <text x="15" y="245" fill="#9ca3af" font-family="sans-serif" font-size="10">переносить силу в обхід хребта</text>
+                      <text data-i18n="svg_1_rail_label" x="15" y="230" fill="#a3e635" font-family="sans-serif" font-size="11" font-weight="bold">Байпасна рельса</text>
+                      <text data-i18n="svg_1_rail_sub" x="15" y="245" fill="#9ca3af" font-family="sans-serif" font-size="10">переносить силу в обхід хребта</text>
 
                       <path d="M 180,345 L 90,345 L 90,320 L 110,320" fill="none" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="3,3" />
                       <circle cx="180" cy="345" r="3" fill="#fbbf24"/>
-                      <text x="15" y="305" fill="#fbbf24" font-family="sans-serif" font-size="11" font-weight="bold">Поперек розвантажено</text>
-                      <text x="15" y="320" fill="#9ca3af" font-family="sans-serif" font-size="10">і фізіологічні вигини збережено</text>
+                      <text data-i18n="svg_1_lumbar_label" x="15" y="305" fill="#fbbf24" font-family="sans-serif" font-size="11" font-weight="bold">Поперек розвантажено</text>
+                      <text data-i18n="svg_1_lumbar_sub" x="15" y="320" fill="#9ca3af" font-family="sans-serif" font-size="10">і фізіологічні вигини збережено</text>
 
                       <path d="M 225,400 L 320,400 L 320,380 L 350,380" fill="none" stroke="#a3e635" stroke-width="1.5" stroke-dasharray="3,3" />
                       <circle cx="225" cy="400" r="3" fill="#a3e635"/>
-                      <text x="330" y="365" fill="#a3e635" font-family="sans-serif" font-size="11" font-weight="bold">Клубові кістки таза</text>
-                      <text x="330" y="380" fill="#9ca3af" font-family="sans-serif" font-size="10">приймають 100% ваги спорядження</text>
+                      <text data-i18n="svg_1_pelvis_label" x="330" y="365" fill="#a3e635" font-family="sans-serif" font-size="11" font-weight="bold">Клубові кістки таза</text>
+                      <text data-i18n="svg_1_pelvis_sub" x="330" y="380" fill="#9ca3af" font-family="sans-serif" font-size="10">приймають 100% ваги спорядження</text>
 
-                      <text x="20" y="30" fill="#4b5320" font-family="monospace" font-size="10" font-weight="bold" letter-spacing="2">DIAGRAM_01: SPINE_UNLOADING</text>
+                      <text data-i18n="svg_1_header" x="20" y="30" fill="#4b5320" font-family="monospace" font-size="10" font-weight="bold" letter-spacing="2">DIAGRAM_01: SPINE_UNLOADING</text>
                     </svg>
                 </div>
             </div>
@@ -231,39 +245,39 @@
     <!-- Technical Specs Section -->
     <section id="benefits" class="py-24 px-6 bg-tactical-gunmetal/30 border-t border-white/5">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl md:text-5xl font-bold text-center mb-16">Технічні інновації та переваги</h2>
+            <h2 data-i18n="specs_title" class="text-3xl md:text-5xl font-bold text-center mb-16">Технічні інновації та переваги</h2>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
                 <!-- Benefit 1 -->
                 <div class="bg-tactical-dark p-8 rounded-2xl border border-white/5 hover:border-tactical-olive transition-colors flex flex-col justify-between">
                     <div>
                         <div class="text-tactical-accent mb-4 text-3xl">🛡️</div>
-                        <h3 class="text-xl font-bold mb-2 text-white">Сумісність</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed">Повна адаптація під будь-які стандартні плитоноски та бойові пояси (варбелти). Не потребує зміни штатної амуніції бійця.</p>
+                        <h3 data-i18n="spec_1_title" class="text-xl font-bold mb-2 text-white">Сумісність</h3>
+                        <p data-i18n="spec_1_desc" class="text-gray-400 text-sm leading-relaxed">Повна адаптація під будь-які стандартні плитоноски та бойові пояси (варбелти). Не потребує зміни штатної амуніції бійця.</p>
                     </div>
                 </div>
                 <!-- Benefit 2 -->
                 <div class="bg-tactical-dark p-8 rounded-2xl border border-white/5 hover:border-tactical-olive transition-colors flex flex-col justify-between">
                     <div>
                         <div class="text-tactical-accent mb-4 text-3xl">🏃</div>
-                        <h3 class="text-xl font-bold mb-2 text-white">Шарнір 360°</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed">Кріплення «Кукумбер» до направляючої рельси забезпечує повне обертання та свободу нахилів і поворотів корпусу без обмежень.</p>
+                        <h3 data-i18n="spec_2_title" class="text-xl font-bold mb-2 text-white">Шарнір 360°</h3>
+                        <p data-i18n="spec_2_desc" class="text-gray-400 text-sm leading-relaxed">Кріплення «Кукумбер» до направляючої рельси забезпечує повне обертання та свободу нахилів і поворотів корпусу без обмежень.</p>
                     </div>
                 </div>
                 <!-- Benefit 3 -->
                 <div class="bg-tactical-dark p-8 rounded-2xl border border-white/5 hover:border-tactical-olive transition-colors flex flex-col justify-between">
                     <div>
                         <div class="text-tactical-accent mb-4 text-3xl">⚡</div>
-                        <h3 class="text-xl font-bold mb-2 text-white">Швидкоскид</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed">Повністю збережена робота штатної системи екстреного скидання бронежилета. Система від'єднується миттєво в один рух.</p>
+                        <h3 data-i18n="spec_3_title" class="text-xl font-bold mb-2 text-white">Швидкоскид</h3>
+                        <p data-i18n="spec_3_desc" class="text-gray-400 text-sm leading-relaxed">Повністю збережена робота штатної системи екстреного скидання бронежилета. Система від'єднується миттєво в один рух.</p>
                     </div>
                 </div>
                 <!-- Benefit 4 -->
                 <div class="bg-tactical-dark p-8 rounded-2xl border border-white/5 hover:border-tactical-olive transition-colors flex flex-col justify-between">
                     <div>
                         <div class="text-tactical-accent mb-4 text-3xl">💰</div>
-                        <h3 class="text-xl font-bold mb-2 text-white">Доступність</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed">Вартість системи — <span class="text-tactical-accent font-bold">14 000 грн</span>. У рази дешевше іноземних екзоскелетних аналогів за значно вищої міцності.</p>
+                        <h3 data-i18n="spec_4_title" class="text-xl font-bold mb-2 text-white">Доступність</h3>
+                        <p data-i18n="spec_4_desc" class="text-gray-400 text-sm leading-relaxed">Вартість системи — <span class="text-tactical-accent font-bold">14 000 грн</span>. У рази дешевше іноземних екзоскелетних аналогів за значно вищої міцності.</p>
                     </div>
                 </div>
             </div>
@@ -387,32 +401,32 @@
 
                 <!-- Technical Specs Text Details -->
                 <div class="order-1 lg:order-2 space-y-6">
-                    <h3 class="text-2xl md:text-3xl font-bold text-white uppercase">Технічні Специфікації</h3>
+                    <h3 data-i18n="specs_header_side" class="text-2xl md:text-3xl font-bold text-white uppercase">Технічні Специфікації</h3>
                     <div class="h-1 w-12 bg-tactical-olive"></div>
                     
                     <ul class="space-y-4 text-gray-300">
                         <li class="flex items-start gap-3">
                             <span class="text-tactical-accent font-bold">●</span>
-                            <div>
-                                <strong class="text-white">Вага системи:</strong> всього <span class="text-tactical-accent font-bold">950 грамів</span>. Жодного зайвого навантаження за рахунок використання аерокосмічних сплавів Д16Т.
+                            <div data-i18n="spec_bullet_1">
+                                <strong>Вага системи:</strong> всього <span class="text-tactical-accent font-bold">950 грамів</span>. Жодного зайвого навантаження за рахунок використання аерокосмічних сплавів Д16Т.
                             </div>
                         </li>
                         <li class="flex items-start gap-3">
                             <span class="text-tactical-accent font-bold">●</span>
-                            <div>
-                                <strong class="text-white">Матеріали:</strong> анодований алюміній підвищеної в'язкості, балістичний пластик та високоміцна оригінальна тканина Cordura 1000D з IRR-просоченням.
+                            <div data-i18n="spec_bullet_2">
+                                <strong>Матеріали:</strong> анодований алюміній підвищеної в'язкості, балістичний пластик та високоміцна оригінальна тканина Cordura 1000D з IRR-просоченням.
                             </div>
                         </li>
                         <li class="flex items-start gap-3">
                             <span class="text-tactical-accent font-bold">●</span>
-                            <div>
-                                <strong class="text-white">Ергономіка:</strong> плавне регулювання висоти рельси під зріст бійця від 165 до 200 см за лічені хвилини.
+                            <div data-i18n="spec_bullet_3">
+                                <strong>Ергономіка:</strong> плавне регулювання висоти рельси під зріст бійця від 165 до 200 см за лічені хвилини.
                             </div>
                         </li>
                         <li class="flex items-start gap-3">
                             <span class="text-tactical-accent font-bold">●</span>
-                            <div>
-                                <strong class="text-white">Надійність:</strong> металевий каркас витримує статичне та динамічне навантаження до 120 кг, захищаючи хребці навіть під час десантування чи падіння на спину.
+                            <div data-i18n="spec_bullet_4">
+                                <strong>Надійність:</strong> металевий каркас витримує статичне та динамічне навантаження до 120 кг, захищаючи хребці навіть під час десантування чи падіння на спину.
                             </div>
                         </li>
                     </ul>
@@ -424,42 +438,42 @@
     <!-- Medical Section -->
     <section id="medical" class="py-24 px-6 bg-tactical-dark border-t border-white/5">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl md:text-5xl font-bold text-center mb-16">Медичне обґрунтування системи</h2>
+            <h2 data-i18n="med_title" class="text-3xl md:text-5xl font-bold text-center mb-16">Медичне обґрунтування системи</h2>
             
             <!-- Structured Medical Arguments -->
             <div class="bg-tactical-gunmetal/20 p-8 rounded-3xl border border-white/5 mb-16 space-y-8">
-                <h3 class="text-xl md:text-2xl font-bold text-tactical-accent uppercase tracking-wide border-b border-white/5 pb-4">Анатомічні ефекти розвантаження РПС Євмінова:</h3>
+                <h3 data-i18n="med_subtitle" class="text-xl md:text-2xl font-bold text-tactical-accent uppercase tracking-wide border-b border-white/5 pb-4">Анатомічні ефекти розвантаження РПС Євмінова:</h3>
                 
                 <div class="grid gap-6">
                     <div class="flex gap-4">
                         <div class="w-8 h-8 rounded-full bg-tactical-olive/30 flex items-center justify-center text-tactical-accent font-bold flex-shrink-0">1</div>
                         <div>
-                            <h4 class="text-lg font-bold text-white mb-1">Розвантаження поперекового лордозу та грудного кіфозу</h4>
-                            <p class="text-gray-400 text-sm leading-relaxed">Система бере на себе роль додаткового опорного стовпа, запобігаючи деформації та підтримуючи природні вигини хребта під великим навантаженням.</p>
+                            <h4 data-i18n="med_arg_1_title" class="text-lg font-bold text-white mb-1">Розвантаження поперекового лордозу та грудного кіфозу</h4>
+                            <p data-i18n="med_arg_1_desc" class="text-gray-400 text-sm leading-relaxed">Система бере на себе роль додаткового опорного стовпа, запобігаючи деформації та підтримуючи природні вигини хребта під великим навантаженням.</p>
                         </div>
                     </div>
                     
                     <div class="flex gap-4">
                         <div class="w-8 h-8 rounded-full bg-tactical-olive/30 flex items-center justify-center text-tactical-accent font-bold flex-shrink-0">2</div>
                         <div>
-                            <h4 class="text-lg font-bold text-white mb-1">Повне перенесення осьової ваги з плечей на таз</h4>
-                            <p class="text-gray-400 text-sm leading-relaxed">Вся вертикальна маса плитоноски і рюкзака через рельсу та шарнір «Кукумбер» передається безпосередньо на міцні клубові кістки таза, які є природною силовою опорою скелета людини.</p>
+                            <h4 data-i18n="med_arg_2_title" class="text-lg font-bold text-white mb-1">Повне перенесення осьової ваги з плечей на таз</h4>
+                            <p data-i18n="med_arg_2_desc" class="text-gray-400 text-sm leading-relaxed">Вся вертикальна маса плитоноски і рюкзака через рельсу та шарнір «Кукумбер» передається безпосередньо на міцні клубові кістки таза, які є природною силовою опорою скелета людини.</p>
                         </div>
                     </div>
                     
                     <div class="flex gap-4">
                         <div class="w-8 h-8 rounded-full bg-tactical-olive/30 flex items-center justify-center text-tactical-accent font-bold flex-shrink-0">3</div>
                         <div>
-                            <h4 class="text-lg font-bold text-white mb-1">Надійна профілактика протрузій та гриж</h4>
-                            <p class="text-gray-400 text-sm leading-relaxed">Усунення осьового компресійного тиску зупиняє процес сплющування та стирання міжхребцевих дисків. Это запобігає защемленню нервових корінців і виникненню радикуліту або гриж у бойових умовах.</p>
+                            <h4 data-i18n="med_arg_3_title" class="text-lg font-bold text-white mb-1">Надійна профілактика протрузій та гриж</h4>
+                            <p data-i18n="med_arg_3_desc" class="text-gray-400 text-sm leading-relaxed">Усунення осьового компресійного тиску зупиняє процес сплющування та стирання міжхребцевих дисків. Это запобігає защемленню нервових корінців і виникненню радикуліту або гриж у бойових умовах.</p>
                         </div>
                     </div>
                     
                     <div class="flex gap-4">
                         <div class="w-8 h-8 rounded-full bg-tactical-olive/30 flex items-center justify-center text-tactical-accent font-bold flex-shrink-0">4</div>
                         <div>
-                            <h4 class="text-lg font-bold text-white mb-1">Відновлення природного бойового дихання</h4>
-                            <p class="text-gray-400 text-sm leading-relaxed">Звільнення плечового пояса та грудної клітки від тиску ременів бронежилета дозволяє бійцю дихати на повні груди. Це нормалізує надходження кисню (сатурацію), знижує пульс та запобігає задишці при інтенсивних штурмових діях.</p>
+                            <h4 data-i18n="med_arg_4_title" class="text-lg font-bold text-white mb-1">Відновлення природного бойового дихання</h4>
+                            <p data-i18n="med_arg_4_desc" class="text-gray-400 text-sm leading-relaxed">Звільнення плечового пояса та грудної клітки від тиску ременів бронежилета дозволяє бійцю дихати на повні груди. Це нормалізує надходження кисню (сатурацію), знижує пульс та запобігає задишці при інтенсивних штурмових діях.</p>
                         </div>
                     </div>
                 </div>
@@ -470,17 +484,17 @@
                 <div class="flex flex-col md:flex-row gap-8 items-start bg-tactical-gunmetal/10 p-6 rounded-2xl border border-white/5">
                     <div class="w-20 h-20 rounded-full bg-tactical-olive/30 flex-shrink-0 border-2 border-tactical-olive flex items-center justify-center text-3xl">👨‍⚕️</div>
                     <div>
-                        <h4 class="text-xl font-bold text-white uppercase">Микола Поліщук</h4>
-                        <p class="text-tactical-accent text-xs mb-4 uppercase tracking-wider">Нейрохірург, професор, екс-міністр охорони здоров'я України</p>
-                        <p class="text-gray-400 leading-relaxed italic">"Система повністю компенсує дегенеративні та травматичні чинники носіння важкого бойового спорядження. Вона повертає природну біомеханіку, убезпечує спинний мозок і зберігає нейром'язову стабільність. Рекомендована до масштабного впровадження у Збройних Силах України."</p>
+                        <h4 data-i18n="med_exp_1_title" class="text-xl font-bold text-white uppercase">Микола Поліщук</h4>
+                        <p data-i18n="med_exp_1_sub" class="text-tactical-accent text-xs mb-4 uppercase tracking-wider">Нейрохірург, професор, екс-міністр охорони здоров'я України</p>
+                        <p data-i18n="med_exp_1_desc" class="text-gray-400 leading-relaxed italic">"Система повністю компенсує дегенеративні та травматичні чинники носіння важкого бойового спорядження. Вона повертає природну біомеханіку, убезпечує спинний мозок і зберігає нейром'язову стабільність. Рекомендована до масштабного впровадження у Збройних Силах України."</p>
                     </div>
                 </div>
                 <div class="flex flex-col md:flex-row gap-8 items-start bg-tactical-gunmetal/10 p-6 rounded-2xl border border-white/5">
                     <div class="w-20 h-20 rounded-full bg-tactical-olive/30 flex-shrink-0 border-2 border-tactical-olive flex items-center justify-center text-3xl">🦾</div>
                     <div>
-                        <h4 class="text-xl font-bold text-white uppercase">В'ячеслав Євмінов</h4>
-                        <p class="text-tactical-accent text-xs mb-4 uppercase tracking-wider">Президент ПП «Центр Євмінова», розробник ортопедичної методики</p>
-                        <p class="text-gray-400 leading-relaxed italic">"Тактичний розвантажувальний корсет працює за принципами нашої науково доведеної системи профілактики хребта. Ми провели понад 150 випробувань у реальних бойових підрозділах сил оборони — бійці підтверджують повне усунення втоми спини навіть після доби носіння амуніції."</p>
+                        <h4 data-i18n="med_exp_2_title" class="text-xl font-bold text-white uppercase">В'ячеслав Євмінов</h4>
+                        <p data-i18n="med_exp_2_sub" class="text-tactical-accent text-xs mb-4 uppercase tracking-wider">Президент ПП «Центр Євмінова», розробник ортопедичної методики</p>
+                        <p data-i18n="med_exp_2_desc" class="text-gray-400 leading-relaxed italic">"Тактичний розвантажувальний корсет працює за принципами нашої науково доведеної системи профілактики хребта. Ми провели понад 150 випробувань у реальних бойових підрозділах сил оборони — бійці підтверджують повне усунення втоми спини навіть після доби носіння амуніції."</p>
                     </div>
                 </div>
             </div>
@@ -491,8 +505,8 @@
     <section id="training" class="py-24 px-6 bg-tactical-dark border-t border-tactical-olive/20">
         <div class="max-w-xl mx-auto">
             <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-white mb-2">Тренувальний хаб відновлення</h2>
-                <p class="text-tactical-olive font-military tracking-widest text-sm uppercase">Профілактор Євмінова (Базові тракційні вправи)</p>
+                <h2 data-i18n="train_title" class="text-4xl font-bold text-white mb-2">Тренувальний хаб відновлення</h2>
+                <p data-i18n="train_subtitle" class="text-tactical-olive font-military tracking-widest text-sm uppercase">Профілактор Євмінова (Базові тракційні вправи)</p>
             </div>
 
             <!-- Training UI -->
@@ -500,7 +514,7 @@
                 
                 <!-- Angle Selector -->
                 <div class="mb-10">
-                    <label class="block text-xs uppercase text-gray-500 font-bold mb-4 tracking-tighter">Оберіть кут нахилу профілактора (°)</label>
+                    <label data-i18n="train_angle_label" class="block text-xs uppercase text-gray-500 font-bold mb-4 tracking-tighter">Оберіть кут нахилу профілактора (°)</label>
                     <div class="flex justify-between gap-2">
                         <button onclick="setAngle(15)" class="angle-btn bg-tactical-dark px-4 py-2 rounded border border-white/10 text-sm">15°</button>
                         <button onclick="setAngle(30)" class="angle-btn bg-tactical-dark px-4 py-2 rounded border border-white/10 text-sm">30°</button>
@@ -521,19 +535,19 @@
                         00:30
                     </div>
                     <div class="flex gap-4">
-                        <button onclick="toggleTimer()" id="timer-btn" class="bg-tactical-olive hover:bg-tactical-olive/80 text-white px-8 py-3 rounded-full font-bold uppercase tracking-widest shadow-lg shadow-tactical-olive/20 transition-all">Старт</button>
-                        <button onclick="resetTimer()" class="bg-tactical-dark hover:bg-tactical-dark/80 text-gray-400 px-8 py-3 rounded-full font-bold uppercase tracking-widest border border-white/10 transition-all">Скинути</button>
+                        <button onclick="toggleTimer()" id="timer-btn" data-i18n="train_timer_start" class="bg-tactical-olive hover:bg-tactical-olive/80 text-white px-8 py-3 rounded-full font-bold uppercase tracking-widest shadow-lg shadow-tactical-olive/20 transition-all">Старт</button>
+                        <button onclick="resetTimer()" data-i18n="train_timer_reset" class="bg-tactical-dark hover:bg-tactical-dark/80 text-gray-400 px-8 py-3 rounded-full font-bold uppercase tracking-widest border border-white/10 transition-all">Скинути</button>
                     </div>
                 </div>
 
                 <!-- Counter -->
                 <div class="flex justify-around border-t border-white/5 pt-8">
                     <div class="text-center">
-                        <div class="text-xs text-gray-500 uppercase mb-1">Виконано підходів</div>
+                        <div data-i18n="train_sets_label" class="text-xs text-gray-500 uppercase mb-1">Виконано підходів</div>
                         <div id="set-count" class="text-3xl font-bold text-white">0/4</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-xs text-gray-500 uppercase mb-1">Кут нахилу</div>
+                        <div data-i18n="train_angle_current" class="text-xs text-gray-500 uppercase mb-1">Кут нахилу</div>
                         <div id="current-angle" class="text-3xl font-bold text-white">30°</div>
                     </div>
                 </div>
@@ -542,12 +556,12 @@
             <!-- Program Selector -->
             <div class="mt-8 grid grid-cols-2 gap-4">
                 <button onclick="selectProgram('power')" class="bg-tactical-dark p-4 rounded-xl border border-white/5 text-left hover:border-tactical-olive transition-colors">
-                    <div class="text-tactical-accent font-bold">Силова програма</div>
-                    <div class="text-[10px] text-gray-500 uppercase tracking-tighter">Для зміцнення м'язового корсета</div>
+                    <div data-i18n="train_prog_power_title" class="text-tactical-accent font-bold">Силова програма</div>
+                    <div data-i18n="train_prog_power_desc" class="text-[10px] text-gray-500 uppercase tracking-tighter">Для зміцнення м'язового корсета</div>
                 </button>
                 <button onclick="selectProgram('rehab')" class="bg-tactical-dark p-4 rounded-xl border border-white/5 text-left hover:border-tactical-olive transition-colors">
-                    <div class="text-tactical-accent font-bold">Програма реабілітації</div>
-                    <div class="text-[10px] text-gray-500 uppercase tracking-tighter">Для відновлення після навантажень</div>
+                    <div data-i18n="train_prog_rehab_title" class="text-tactical-accent font-bold">Програма реабілітації</div>
+                    <div data-i18n="train_prog_rehab_desc" class="text-[10px] text-gray-500 uppercase tracking-tighter">Для відновлення після навантажень</div>
                 </button>
             </div>
         </div>
@@ -556,8 +570,8 @@
     <!-- Media Section (Interactive Video Gallery) -->
     <section id="media" class="py-24 px-6 bg-tactical-dark/50 border-t border-white/5">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl md:text-5xl font-bold text-center mb-4">Презентація та польові тести</h2>
-            <p class="text-gray-400 text-center mb-16 max-w-xl mx-auto text-sm md:text-base">Ознайомтесь із реальними випробуваннями системи РПС Євмінова силами оборони України та репортажами військових експертів.</p>
+            <h2 data-i18n="media_title" class="text-3xl md:text-5xl font-bold text-center mb-4">Презентація та польові тести</h2>
+            <p data-i18n="media_subtitle" class="text-gray-400 text-center mb-16 max-w-xl mx-auto text-sm md:text-base">Ознайомтесь із реальними випробуваннями системи РПС Євмінова силами оборони України та репортажами військових експертів.</p>
             
             <div class="grid lg:grid-cols-3 gap-8 items-start">
                 <!-- Featured Video Player (2/3 width on desktop) -->
@@ -566,7 +580,7 @@
                         <iframe id="main-video-player" class="w-full h-full" src="https://www.youtube.com/embed/X-v5XyT1XwU" title="РПС Євмінова" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                     <div class="bg-tactical-gunmetal/20 p-6 rounded-2xl border border-white/5">
-                        <span class="text-tactical-accent font-military text-xs uppercase tracking-widest block mb-2">ПОТОЧНЕ ВІДЕО</span>
+                        <span data-i18n="media_current_video" class="text-tactical-accent font-military text-xs uppercase tracking-widest block mb-2">ПОТОЧНЕ ВІДЕО</span>
                         <h3 id="video-title" class="text-xl md:text-2xl font-bold text-white uppercase">Репортаж телеканалу КИЇВ24</h3>
                         <p id="video-desc" class="text-gray-400 text-sm mt-3 leading-relaxed">Ексклюзивний сюжет про РПС Євмінова за участі полковника Сил оборони Володимира Стецюка та головного інженера-розробника з позивним «Тул».</p>
                     </div>
@@ -574,15 +588,15 @@
 
                 <!-- Playlist / Video Selector (1/3 width on desktop) -->
                 <div class="space-y-4">
-                    <h4 class="font-military text-xs uppercase tracking-widest text-gray-400 mb-2">Оберіть відеоматеріал:</h4>
+                    <h4 data-i18n="media_playlist_label" class="font-military text-xs uppercase tracking-widest text-gray-400 mb-2">Оберіть відеоматеріал:</h4>
                     
                     <!-- Video 1 (Active by default) -->
                     <div onclick="selectVideo('X-v5XyT1XwU', this)" class="video-card cursor-pointer p-4 rounded-xl border border-tactical-accent bg-tactical-olive/20 hover:border-tactical-accent transition-all">
                         <div class="flex items-center gap-3">
                             <div class="w-10 h-10 rounded bg-red-600/20 text-red-500 flex items-center justify-center font-bold text-lg">▶</div>
                             <div>
-                                <h5 class="text-sm font-bold text-white uppercase">Репортаж КИЇВ24</h5>
-                                <p class="text-[10px] text-gray-400 uppercase tracking-tighter mt-0.5">Огляд Сюжету • 4:26</p>
+                                <h5 data-i18n="media_item_1_title" class="text-sm font-bold text-white uppercase">Репортаж КИЇВ24</h5>
+                                <p data-i18n="media_item_1_sub" class="text-[10px] text-gray-400 uppercase tracking-tighter mt-0.5">Огляд Сюжету • 4:26</p>
                             </div>
                         </div>
                     </div>
@@ -592,8 +606,8 @@
                         <div class="flex items-center gap-3">
                             <div class="w-10 h-10 rounded bg-red-600/20 text-red-500 flex items-center justify-center font-bold text-lg">▶</div>
                             <div>
-                                <h5 class="text-sm font-bold text-white uppercase">Мобільність 360°</h5>
-                                <p class="text-[10px] text-gray-400 uppercase tracking-tighter mt-0.5">YouTube Shorts • 0:59</p>
+                                <h5 data-i18n="media_item_2_title" class="text-sm font-bold text-white uppercase">Мобільність 360°</h5>
+                                <p data-i18n="media_item_2_sub" class="text-[10px] text-gray-400 uppercase tracking-tighter mt-0.5">YouTube Shorts • 0:59</p>
                             </div>
                         </div>
                     </div>
@@ -603,8 +617,8 @@
                         <div class="flex items-center gap-3">
                             <div class="w-10 h-10 rounded bg-red-600/20 text-red-500 flex items-center justify-center font-bold text-lg">▶</div>
                             <div>
-                                <h5 class="text-sm font-bold text-white uppercase">Технічний огляд</h5>
-                                <p class="text-[10px] text-gray-400 uppercase tracking-tighter mt-0.5">Інструкція та збірка • 8:12</p>
+                                <h5 data-i18n="media_item_3_title" class="text-sm font-bold text-white uppercase">Технічний огляд</h5>
+                                <p data-i18n="media_item_3_sub" class="text-[10px] text-gray-400 uppercase tracking-tighter mt-0.5">Інструкція та збірка • 8:12</p>
                             </div>
                         </div>
                     </div>
@@ -614,8 +628,8 @@
                         <div class="flex items-center gap-3">
                             <div class="w-10 h-10 rounded bg-red-600/20 text-red-500 flex items-center justify-center font-bold text-lg">▶</div>
                             <div>
-                                <h5 class="text-sm font-bold text-white uppercase">Польові тести ЗСУ</h5>
-                                <p class="text-[10px] text-gray-400 uppercase tracking-tighter mt-0.5">Випробування • 5:45</p>
+                                <h5 data-i18n="media_item_4_title" class="text-sm font-bold text-white uppercase">Польові тести ЗСУ</h5>
+                                <p data-i18n="media_item_4_sub" class="text-[10px] text-gray-400 uppercase tracking-tighter mt-0.5">Випробування • 5:45</p>
                             </div>
                         </div>
                     </div>
@@ -631,28 +645,28 @@
                 <div class="text-2xl font-bold text-tactical-olive mb-6">
                     <span class="text-white">РПС</span> ЄВМІНОВА
                 </div>
-                <p class="text-gray-500 text-sm leading-relaxed">
+                <p data-i18n="footer_desc" class="text-gray-500 text-sm leading-relaxed">
                     Ми створюємо інструменти для тих, хто тримає небо на своїх плечах. Здоров'я хребта — це збереження боєздатності нації та наближення нашої Перемоги.
                 </p>
             </div>
             <div>
-                <h4 class="font-bold text-white uppercase mb-6 tracking-widest">Контакти</h4>
+                <h4 data-i18n="footer_contacts" class="font-bold text-white uppercase mb-6 tracking-widest">Контакти</h4>
                 <ul class="space-y-4 text-gray-500 text-sm">
-                    <li>📍 ПП «Центр Євмінова», м. Київ, вул. Костьольна, 9</li>
+                    <li data-i18n="footer_address">📍 ПП «Центр Євмінова», м. Київ, вул. Костьольна, 9</li>
                     <li>📞 +38 (044) 270-70-11</li>
                     <li>🌐 <a href="https://evminov.com" target="_blank" class="text-tactical-olive hover:text-tactical-accent transition-colors">evminov.com</a></li>
                 </ul>
             </div>
             <div>
-                <h4 class="font-bold text-white uppercase mb-6 tracking-widest">Армія та Здоров'я</h4>
+                <h4 data-i18n="footer_army" class="font-bold text-white uppercase mb-6 tracking-widest">Армія та Здоров'я</h4>
                 <div class="flex gap-2">
                     <div class="w-12 h-1 bg-patriotic"></div>
                     <div class="w-12 h-1 bg-tactical-accent"></div>
                 </div>
-                <p class="mt-4 text-[10px] text-gray-600 uppercase">Слава Україні! Героям Слава!</p>
+                <p data-i18n="footer_slogan" class="mt-4 text-[10px] text-gray-600 uppercase">Слава Україні! Героям Слава!</p>
             </div>
         </div>
-        <div class="max-w-6xl mx-auto mt-16 pt-8 border-t border-white/5 text-center text-[10px] text-gray-700 uppercase tracking-widest">
+        <div data-i18n="footer_copy" class="max-w-6xl mx-auto mt-16 pt-8 border-t border-white/5 text-center text-[10px] text-gray-700 uppercase tracking-widest">
             © 2026 РПС ЄВМІНОВА. АНАТОМІЧНІ ТАКТИЧНІ СИСТЕМИ.
         </div>
     </footer>
