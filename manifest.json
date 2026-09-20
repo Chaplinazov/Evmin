@@ -1,0 +1,21 @@
+{
+  "name": "РПС Євмінова",
+  "short_name": "РПС",
+  "description": "Тактичне спорядження та тренування за методикою Євмінова",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#4b5320",
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

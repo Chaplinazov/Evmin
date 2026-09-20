@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>РПС ЄВМІНОВА — Тактичне спорядження майбутнього</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4b5320">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        tactical: {
+                            olive: '#4b5320',
+                            dark: '#0a0a0a',
+                            gunmetal: '#2a2d34',
+                            accent: '#eab308', // Gold/Yellow
+                            patriotic: '#2563eb' // Blue
+                        }
+                    },
+                    fontFamily: {
+                        military: ['Oswald', 'sans-serif'],
+                        body: ['Roboto', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Roboto', sans-serif; background-color: #0a0a0a; color: #e5e7eb; }
+        h1, h2, h3 { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 0.05em; }
+        .bg-tactical-gradient {
+            background: linear-gradient(180deg, rgba(10,10,10,1) 0%, rgba(75,83,32,0.3) 100%);
+        }
+        .btn-tactical {
+            background-color: #4b5320;
+            border-bottom: 4px solid #323815;
+            transition: all 0.2s;
+        }
+        .btn-tactical:active {
+            border-bottom-width: 0;
+            transform: translateY(4px);
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-tactical-dark/90 backdrop-blur-md border-b border-tactical-olive/30 py-4 px-6 flex justify-between items-center">
+        <div class="text-2xl font-bold text-tactical-olive flex items-center gap-2">
+            <span class="text-white">РПС</span> ЄВМІНОВА
+        </div>
+        <div class="flex gap-4">
+            <a href="#training" class="text-xs uppercase tracking-widest font-bold text-tactical-accent border border-tactical-accent/50 px-3 py-1 rounded">Тренування</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20 px-6 bg-tactical-gradient">
+        <div class="max-w-4xl text-center">
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 animate-pulse">
+                Інженерна <span class="text-tactical-olive">ергономіка</span> для військових
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Повністю знімає <span class="text-white font-bold">100% ваги</span> бронезахисту та рюкзака з плечей, переносячи її на таз.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#about" class="btn-tactical text-white px-10 py-4 rounded-lg font-bold text-lg uppercase">Дізнатися більше</a>
+                <a href="#training" class="bg-tactical-gunmetal text-white px-10 py-4 rounded-lg font-bold text-lg uppercase border border-white/10">Програми тренувань</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="about" class="py-24 px-6 bg-tactical-dark border-t border-white/5">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Проблема</h2>
+                <div class="h-1 w-20 bg-tactical-olive mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <div class="bg-tactical-gunmetal/50 p-6 rounded-xl border-l-4 border-red-600">
+                        <p class="text-lg italic">"Тривале носіння амуніції вагою понад 25 кг руйнує здоров'я бійців."</p>
+                    </div>
+                    <p class="text-gray-400 text-lg">
+                        Це призводить до хронічного болю, серйозних захворювань хребта, швидкої втомлюваності та значного зниження бойової ефективності. Більшість сучасних систем лише частково вирішують це питання.
+                    </p>
+                </div>
+                <div class="relative">
+                    <div class="aspect-video bg-tactical-olive/20 rounded-2xl flex items-center justify-center border border-tactical-olive/40 overflow-hidden">
+                        <span class="text-tactical-olive/50 font-military text-2xl uppercase tracking-widest">Атомічна Візуалізація</span>
+                        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-24 px-6 bg-tactical-gunmetal/30">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-16">Чому ми кращі</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Benefit 1 -->
+                <div class="bg-tactical-dark p-8 rounded-2xl border border-white/5 hover:border-tactical-olive transition-colors">
+                    <div class="text-tactical-olive mb-4 text-3xl">🛡️</div>
+                    <h3 class="text-xl font-bold mb-2">Універсальність</h3>
+                    <p class="text-gray-500 text-sm">Сумісна з усіма моделями плитоносок та бронежилетів. Не потрібно купувати новий захист.</p>
+                </div>
+                <!-- Benefit 2 -->
+                <div class="bg-tactical-dark p-8 rounded-2xl border border-white/5 hover:border-tactical-olive transition-colors">
+                    <div class="text-tactical-olive mb-4 text-3xl">🏃</div>
+                    <h3 class="text-xl font-bold mb-2">Мобільність</h3>
+                    <p class="text-gray-500 text-sm">Не обмежує рухи (нахили, повороти) завдяки унікальному кріпленню "кукумбера".</p>
+                </div>
+                <!-- Benefit 3 -->
+                <div class="bg-tactical-dark p-8 rounded-2xl border border-white/5 hover:border-tactical-olive transition-colors">
+                    <div class="text-tactical-olive mb-4 text-3xl">⚡</div>
+                    <h3 class="text-xl font-bold mb-2">Швидкоскид</h3>
+                    <p class="text-gray-500 text-sm">Повністю збережена система швидкого скидання для екстрених ситуацій.</p>
+                </div>
+                <!-- Benefit 4 -->
+                <div class="bg-tactical-dark p-8 rounded-2xl border border-white/5 hover:border-tactical-olive transition-colors">
+                    <div class="text-tactical-olive mb-4 text-3xl">💰</div>
+                    <h3 class="text-xl font-bold mb-2">Ціна: 14 000 грн</h3>
+                    <p class="text-gray-500 text-sm">У рази дешевше закордонних аналогів при вищій функціональності.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expert Opinions -->
+    <section class="py-24 px-6 bg-tactical-dark">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-16 italic">Експертна оцінка</h2>
+            <div class="space-y-12">
+                <div class="flex flex-col md:flex-row gap-8 items-start">
+                    <div class="w-24 h-24 rounded-full bg-tactical-olive/30 flex-shrink-0 border-2 border-tactical-olive"></div>
+                    <div>
+                        <h4 class="text-xl font-bold text-white uppercase">Микола Поліщук</h4>
+                        <p class="text-tactical-olive text-sm mb-4">Нейрохірург, екс-міністр охорони здоров'я</p>
+                        <p class="text-gray-400 leading-relaxed italic">"Система попереджає дегенеративні зміни у хребті, відновлює дихання та зберігає нейром'язову стабільність. Рекомендована до впровадження в ЗСУ."</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-8 items-start">
+                    <div class="w-24 h-24 rounded-full bg-tactical-gunmetal flex-shrink-0 border-2 border-tactical-gunmetal"></div>
+                    <div>
+                        <h4 class="text-xl font-bold text-white uppercase">В'ячеслав Євмінов</h4>
+                        <p class="text-tactical-olive text-sm mb-4">Розробник методики профілактики хребта</p>
+                        <p class="text-gray-400 leading-relaxed italic">"Система працює за принципом ортопедичних корсетів. Більше 150 тестових випробувань підрозділами Сил оборони довели її ефективність."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Module (PWA App Part) -->
+    <section id="training" class="py-24 px-6 bg-tactical-dark min-h-screen border-t border-tactical-olive/20">
+        <div class="max-w-xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-white mb-2">Тренувальний Хаб</h2>
+                <p class="text-tactical-olive font-military tracking-widest text-sm uppercase">Профілактор Євмінова</p>
+            </div>
+
+            <!-- Training UI -->
+            <div id="training-app" class="bg-tactical-gunmetal/40 p-8 rounded-3xl border border-white/10 shadow-2xl">
+                
+                <!-- Angle Selector -->
+                <div class="mb-10">
+                    <label class="block text-xs uppercase text-gray-500 font-bold mb-4 tracking-tighter">Оберіть кут нахилу дошки (°)</label>
+                    <div class="flex justify-between gap-2">
+                        <button onclick="setAngle(15)" class="angle-btn bg-tactical-dark px-4 py-2 rounded border border-white/10 text-sm">15°</button>
+                        <button onclick="setAngle(30)" class="angle-btn bg-tactical-dark px-4 py-2 rounded border border-white/10 text-sm">30°</button>
+                        <button onclick="setAngle(45)" class="angle-btn bg-tactical-dark px-4 py-2 rounded border border-white/10 text-sm">45°</button>
+                        <button onclick="setAngle(60)" class="angle-btn bg-tactical-dark px-4 py-2 rounded border border-white/10 text-sm">60°</button>
+                    </div>
+                </div>
+
+                <!-- Active Exercise -->
+                <div class="text-center mb-10">
+                    <div id="exercise-name" class="text-2xl font-bold mb-2">Напіввисі</div>
+                    <div id="exercise-desc" class="text-sm text-gray-500 italic">Розслаблення м'язів спини, витяжіння</div>
+                </div>
+
+                <!-- Timer -->
+                <div class="flex flex-col items-center mb-10">
+                    <div id="timer-display" class="text-7xl font-military font-bold text-tactical-accent tabular-nums mb-4">
+                        00:30
+                    </div>
+                    <div class="flex gap-4">
+                        <button onclick="toggleTimer()" id="timer-btn" class="bg-tactical-olive text-white px-8 py-3 rounded-full font-bold uppercase tracking-widest shadow-lg shadow-tactical-olive/20">Старт</button>
+                        <button onclick="resetTimer()" class="bg-tactical-dark text-gray-400 px-8 py-3 rounded-full font-bold uppercase tracking-widest border border-white/10">Скидання</button>
+                    </div>
+                </div>
+
+                <!-- Counter -->
+                <div class="flex justify-around border-t border-white/5 pt-8">
+                    <div class="text-center">
+                        <div class="text-xs text-gray-500 uppercase mb-1">Підходи</div>
+                        <div id="set-count" class="text-3xl font-bold">0/4</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-xs text-gray-500 uppercase mb-1">Кут</div>
+                        <div id="current-angle" class="text-3xl font-bold">30°</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Program Selector -->
+            <div class="mt-8 grid grid-cols-2 gap-4">
+                <button onclick="selectProgram('power')" class="bg-tactical-dark p-4 rounded-xl border border-white/5 text-left hover:border-tactical-olive">
+                    <div class="text-tactical-olive font-bold">Силова</div>
+                    <div class="text-[10px] text-gray-500 uppercase tracking-tighter">Для зміцнення каркасу</div>
+                </button>
+                <button onclick="selectProgram('rehab')" class="bg-tactical-dark p-4 rounded-xl border border-white/5 text-left hover:border-tactical-olive">
+                    <div class="text-tactical-olive font-bold">Реабілітація</div>
+                    <div class="text-[10px] text-gray-500 uppercase tracking-tighter">Після навантажень</div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media Section -->
+    <section class="py-24 px-6 bg-tactical-dark/50">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Демонстрація Системи</h2>
+            <div class="aspect-video bg-black rounded-3xl overflow-hidden shadow-2xl relative border border-white/10">
+                <div class="absolute inset-0 flex flex-col items-center justify-center bg-tactical-olive/10 group cursor-pointer">
+                    <div class="w-20 h-20 bg-tactical-accent rounded-full flex items-center justify-center text-tactical-dark text-3xl pl-2 group-hover:scale-110 transition-transform">
+                        ▶
+                    </div>
+                    <p class="mt-6 font-military text-white tracking-widest">Дивитися відео презентацію (Київ24)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-tactical-dark py-16 px-6 border-t border-white/5">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
+            <div>
+                <div class="text-2xl font-bold text-tactical-olive mb-6">
+                    <span class="text-white">РПС</span> ЄВМІНОВА
+                </div>
+                <p class="text-gray-500 text-sm leading-relaxed">
+                    Ми створюємо інструменти для тих, хто тримає небо на своїх плечах. Здоров'я хребта — це боєздатність нації.
+                </p>
+            </div>
+            <div>
+                <h4 class="font-bold text-white uppercase mb-6 tracking-widest">Контакти</h4>
+                <ul class="space-y-4 text-gray-500 text-sm">
+                    <li>📍 ПП «Центр Євмінова», м. Київ, вул. Костьольна, 9</li>
+                    <li>📞 +38 (044) 270-70-11</li>
+                    <li>🌐 <a href="https://evminov.com" class="text-tactical-olive hover:text-tactical-accent">evminov.com</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-white uppercase mb-6 tracking-widest">Армія та Здоров'я</h4>
+                <div class="flex gap-2">
+                    <div class="w-12 h-1 bg-patriotic"></div>
+                    <div class="w-12 h-1 bg-tactical-accent"></div>
+                </div>
+                <p class="mt-4 text-[10px] text-gray-600 uppercase">Слава Україні! Героям Слава!</p>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto mt-16 pt-8 border-t border-white/5 text-center text-[10px] text-gray-700 uppercase tracking-widest">
+            © 2026 РПС ЄВМІНОВА. ТАКТИЧНЕ РІШЕННЯ.
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
